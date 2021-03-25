@@ -11,6 +11,7 @@
 }
 
 .products__items {
+    margin: auto;
     width: 308px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 150px);
