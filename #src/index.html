@@ -10,22 +10,99 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="app">
     <nav class="header__inner">
       <a class="header__logo">
         <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
       </a>
-      <ul class="header__site-nav site-nav">
-        <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link--dropdown" href="#">Подобрать вино</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Как заказать</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Контакты</a>
-        </li>
-      </ul>
+      <div class="header__site-nav-wrapper">
+        <ul class="header__site-nav site-nav">
+          <li class="site-nav__item site-nav__item--dropdown-wrapper">
+            <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+            <table class="site-nav__menu-dropdown menu-dropdown">
+              <thead class="menu-dropdown__table-head">
+              <tr class="menu-dropdown__row">
+                <th class="menu-dropdown__heading">По регионам</th>
+                <th class="menu-dropdown__heading">Цвет</th>
+                <th class="menu-dropdown__heading">Сахар</th>
+              </tr>
+              </thead>
+              <tbody class="menu-dropdown__table-body">
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Крым
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Красное
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кубань
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Оранжевое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кавказ
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Розовое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусухое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item"></td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Белое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сухое
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">Как заказать</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
       <ul class="header__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__cart-link" href="#">
@@ -60,7 +137,7 @@
             <h2 class="products__item__name">Крымское лето</h2>
             <p class="products__item__description">Красное, полусухое</p>
             <div class="products__item__other">
-              <h3 class="products__item__price">1200 ₽</h3>
+              <h3 class="products__item__price">1200 ₽</h3>в тр
               <h4 class="products__item__volume">0.7L</h4>
             </div>
           </div>
@@ -134,5 +211,7 @@
       </div>
     </section>
 </main>
+
+  <script src="js/index.min.js"></script>
 </body>
 </html>
