@@ -77,6 +77,19 @@
   cursor: pointer;
 }
 
+.user-nav__offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  margin: 0;
+  padding: 0;
+
+  z-index: 10;
+}
+
 .user-nav__cart-counter,
 .user-nav__favorite-counter {
   position: absolute;
@@ -98,6 +111,7 @@
   line-height: 16px;
   letter-spacing: 0.75px;
   text-align: left;
+  color: rgba($trueBlack, 0.88);
 
   background: $yellowMain;
   border-radius: 50%;
