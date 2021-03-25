@@ -1,23 +1,99 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Своё вино | Главная</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
-        <nav class="header__navigation-wrapper">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Своё вино | Главная</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__inner">
+        <a class="header__logo">
+          <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+        </a>
+        <div class="header__site-nav-wrapper">
           <ul class="header__site-nav site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--dropdown" href="#">Подобрать вино</a>
+            <li class="site-nav__item site-nav__item--dropdown-wrapper">
+              <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+              <table class="site-nav__menu-dropdown menu-dropdown">
+                <thead class="menu-dropdown__table-head">
+                <tr class="menu-dropdown__row">
+                  <th class="menu-dropdown__heading">По регионам</th>
+                  <th class="menu-dropdown__heading">Цвет</th>
+                  <th class="menu-dropdown__heading">Сахар</th>
+                </tr>
+                </thead>
+                <tbody class="menu-dropdown__table-body">
+                <tr class="menu-dropdown__row">
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Крым
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Красное
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Сладкое
+                    </a>
+                  </td>
+                </tr>
+                <tr class="menu-dropdown__row">
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Кубань
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Оранжевое
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Полусладкое
+                    </a>
+                  </td>
+                </tr>
+                <tr class="menu-dropdown__row">
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Кавказ
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Розовое
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Полусухое
+                    </a>
+                  </td>
+                </tr>
+                <tr class="menu-dropdown__row">
+                  <td class="menu-dropdown__item"></td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Белое
+                    </a>
+                  </td>
+                  <td class="menu-dropdown__item">
+                    <a class="menu-dropdown__link" href="#">
+                      Сухое
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="#">Как заказать</a>
@@ -26,115 +102,199 @@
               <a class="site-nav__link" href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="header__user-nav user-nav">
-            <li class="user-nav__item">
-              <a class="user-nav__cart-link" href="#">
-                <span class="user-nav__cart-counter">3</span>
-                <span class="visually-hidden">Корзина товаров</span>
-              </a>
-            </li>
-            <li class="user-nav__item">
-              <a class="user-nav__favorite-link" href="#">
-                <span class="user-nav__favorite-counter">5</span>
-                <span class="visually-hidden">Избранное</span>
-              </a>
-            </li>
-            <li class="user-nav__item">
-              <button class="user-nav__burger-button" type="button">
-                <span class="visually-hidden">Открыть меню</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <ul class="header__user-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__cart-link" href="#">
+              <span class="user-nav__cart-counter">3</span>
+              <span class="visually-hidden">Корзина товаров</span>
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__favorite-link" href="#">
+              <span class="user-nav__favorite-counter">5</span>
+              <span class="visually-hidden">Избранное</span>
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item--burger-wrapper">
+            <button class="user-nav__burger-button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="user-nav__offcanvas offcanvas">
+              <div class="offcanvas__window">
+                <ul class="offcanvas__list">
+                  <li class="offcanvas__item">
+                    <button class="offcanvas__toggle-button" type="button" onclick="toggleOffcanvasDropdown()">
+                      Подобрать вино
+                    </button>
+                    <div class="offcanvas__toggle-inner">
+                      <div class="offcanvas__wine-type wine-type">
+                        <h3 class="wine-type__heading wine-type__heading--region-icon">По регионам</h3>
+                        <ul class="wine-type__list">
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Крым</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Кубань</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Кавказ</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offcanvas__wine-type wine-type">
+                        <h3 class="wine-type__heading wine-type__heading--color-icon">Цвет</h3>
+                        <ul class="wine-type__list">
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Красное</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Оранжевое</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Розовое</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Белое</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offcanvas__wine-type wine-type">
+                        <h3 class="wine-type__heading wine-type__heading--sugar-icon">Сахар</h3>
+                        <ul class="wine-type__list">
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Сладкое</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Полусладкое</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Полусухое</a>
+                          </li>
+                          <li class="wine-type__item">
+                            <a class="wine-type__link" href="#">Сухое</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="offcanvas__item">
+                    <a class="offcanvas__link" href="#">Как заказать</a>
+                  </li>
+                  <li class="offcanvas__item">
+                    <a class="offcanvas__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <h1 class="visually-hidden">Интернет магазин крафтового вина «Своё вино»</h1>
+      <section class="main-content__keyvisual keyvisual">
+        <!-- TODO разметка блока keyvisual-->
+      </section>
+      <div class="main-content__excerpt excerpt">
+        <h2 class="excerpt__heading visually-hidden">Как получается наше вино</h2>
+        <p class="excerpt__text">
+          Мы отбираем <b class="excerpt__bold-text">лучшие сорта</b> российского вина, бережно заворачиваем их в
+          крафтовую упаковку и доставляем Вам прямо домой, надеясь, что вы <b class="excerpt__bold-text">оцените их</b>
+          по достоинству.
+        </p>
       </div>
-    </div>
-  </header>
-  <main class="main-content">
-    <section class="main-content__recommend-products products">
-      <h1 class="products__title">
-        Первое, что хочется предложить
-      </h1>
-      <div class="products__items">
-        <div class="products__item item1">
-          <img class="products__item__img" src="img/Krim-summer.png" alt="Крымское лето">
-          <div class="products__item__badge products__item__badge-crimea">Крым</div>
-          <div class="item__content">
-            <h2 class="products__item__name">Крымское лето</h2>
-            <p class="products__item__description">Красное, полусухое</p>
-            <div class="products__item__other">
-              <h3 class="products__item__price">1200 ₽</h3>
-              <h4 class="products__item__volume">0.7L</h4>
+      <section class="main-content__authors authors">
+        <!-- TODO разметка блока с авторами -->
+      </section>
+
+      <section class="main-content__recommend-products products">
+        <h1 class="products__title">
+          Первое, что хочется предложить
+        </h1>
+        <div class="products__items">
+          <div class="products__item item1">
+            <img class="products__item__img" src="img/Krim-summer.png" alt="Крымское лето">
+            <div class="products__item__badge products__item__badge-crimea">Крым</div>
+            <div class="item__content">
+              <h2 class="products__item__name">Крымское лето</h2>
+              <p class="products__item__description">Красное, полусухое</p>
+              <div class="products__item__other">
+                <h3 class="products__item__price">1200 ₽</h3>в тр
+                <h4 class="products__item__volume">0.7L</h4>
+              </div>
+            </div>
+          </div>
+          <div class="products__item item2">
+            <img class="products__item__img" src="img/Renessans.png" alt="Ренессанс">
+            <div class="products__item__badge products__item__badge-kuban">Кубань</div>
+            <div class="item__content">
+              <h2 class="products__item__name">Ренессанс</h2>
+              <p class="products__item__description">Белое, полусладкое</p>
+              <div class="products__item__other">
+                <h3 class="products__item__price">900 ₽</h3>
+                <h4 class="products__item__volume">0.72L</h4>
+              </div>
+            </div>
+          </div>
+          <div class="products__item products__item-big item3">
+            <picture class="products__item__img">
+              <source media="(min-width: 720px)" srcset="img/Solaris-big.png">
+              <source media="(max-width: 719px)" srcset="img/Solaris.png">
+              <img src="img/Solaris-big.png">
+          </picture>
+            <div class="products__item__badge products__item__badge-caucasus">Кавказ</div>
+            <div class="item__content">
+              <h2 class="products__item__name">Солярис</h2>
+              <p class="products__item__description">Белое, сухое</p>
+              <div class="products__item__other">
+                <h3 class="products__item__price">1350 ₽</h3>
+                <h4 class="products__item__volume">0.65L</h4>
+              </div>
+            </div>
+          </div>
+          <div class="products__item item4">
+            <img class="products__item__img" src="img/Krim-somelie.png" alt="Крымский сомелье">
+            <div class="products__item__badge products__item__badge-crimea">Крым</div>
+            <div class="item__content">
+              <h2 class="products__item__name">Крымское лето</h2>
+              <p class="products__item__description">Красное, сухое</p>
+              <div class="products__item__other">
+                <h3 class="products__item__price">1100 ₽</h3>
+                <h4 class="products__item__volume">0.6L</h4>
+              </div>
+            </div>
+          </div>
+          <div class="products__item item5">
+            <img class="products__item__img" src="img/sourse-capital.png" alt="Южная столица">
+            <div class="products__item__badge products__item__badge-kuban">Кубань</div>
+            <div class="item__content">
+              <h2 class="products__item__name">Южная столица</h2>
+              <p class="products__item__description">Игристое, полусладкое</p>
+              <div class="products__item__other">
+                <h3 class="products__item__price">680 ₽</h3>
+                <h4 class="products__item__volume">0.7L</h4>
+              </div>
             </div>
           </div>
         </div>
-        <div class="products__item item2">
-          <img class="products__item__img" src="img/Renessans.png" alt="Ренессанс">
-          <div class="products__item__badge products__item__badge-kuban">Кубань</div>
-          <div class="item__content">
-            <h2 class="products__item__name">Ренессанс</h2>
-            <p class="products__item__description">Белое, полусладкое</p>
-            <div class="products__item__other">
-              <h3 class="products__item__price">900 ₽</h3>
-              <h4 class="products__item__volume">0.72L</h4>
-            </div>
+        <button class="products__btn">Смотреть все вина</button>
+      </section>
+      <section class="main-content__regions-block">
+        <div class="regions-block__items">
+          <div class="regions-block__item region-crimea">
+            <div class="regions-block__item__name-crimea">Крым</div>
+          </div>
+          <div class="regions-block__item region-kunan">
+            <div class="regions-block__item__name-kuban">Кубань</div>
+          </div>
+          <div class="regions-block__item region-caucasus">
+            <div class="regions-block__item__name-caucasus">Кавказ</div>
           </div>
         </div>
-        <div class="products__item products__item-big item3">
-          <picture class="products__item__img">
-            <source media="(min-width: 720px)" srcset="img/Solaris-big.png">
-            <source media="(max-width: 719px)" srcset="img/Solaris.png">
-            <img src="img/Solaris-big.png">
-        </picture>
-          <div class="products__item__badge products__item__badge-caucasus">Кавказ</div>
-          <div class="item__content">
-            <h2 class="products__item__name">Солярис</h2>
-            <p class="products__item__description">Белое, сухое</p>
-            <div class="products__item__other">
-              <h3 class="products__item__price">1350 ₽</h3>
-              <h4 class="products__item__volume">0.65L</h4>
-            </div>
-          </div>
-        </div>
-        <div class="products__item item4">
-          <img class="products__item__img" src="img/Krim-somelie.png" alt="Крымский сомелье">
-          <div class="products__item__badge products__item__badge-crimea">Крым</div>
-          <div class="item__content">
-            <h2 class="products__item__name">Крымское лето</h2>
-            <p class="products__item__description">Красное, сухое</p>
-            <div class="products__item__other">
-              <h3 class="products__item__price">1100 ₽</h3>
-              <h4 class="products__item__volume">0.6L</h4>
-            </div>
-          </div>
-        </div>
-        <div class="products__item item5">
-          <img class="products__item__img" src="img/sourse-capital.png" alt="Южная столица">
-          <div class="products__item__badge products__item__badge-kuban">Кубань</div>
-          <div class="item__content">
-            <h2 class="products__item__name">Южная столица</h2>
-            <p class="products__item__description">Игристое, полусладкое</p>
-            <div class="products__item__other">
-              <h3 class="products__item__price">680 ₽</h3>
-              <h4 class="products__item__volume">0.7L</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="products__btn">Смотреть все вина</button>
-    </section>
-    <section class="main-content__regions-block">
-      <div class="regions-block__items">
-        <div class="regions-block__item region-crimea">
-          <div class="regions-block__item__name-crimea">Крым</div>
-        </div>
-        <div class="regions-block__item region-kunan">
-          <div class="regions-block__item__name-kuban">Кубань</div>
-        </div>
-        <div class="regions-block__item region-caucasus">
-          <div class="regions-block__item__name-caucasus">Кавказ</div>
-        </div>
-      </div>
-    </section>
-</main>
-</body>
+      </section>
+  </main>
+
+    <script src="js/index.min.js"></script>
+  </body>
 </html>
