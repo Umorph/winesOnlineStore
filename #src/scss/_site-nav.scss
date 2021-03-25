@@ -17,6 +17,26 @@
   }
 }
 
+.site-nav__item--dropdown-wrapper:hover .site-nav__menu-dropdown {
+  display: table;
+}
+
+.site-nav__menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+
+  &:hover {
+    display: table;
+  }
+
+  &--opened {
+    display: table;
+  }
+}
+
 .site-nav__link {
   margin: 0;
   padding: 0;
@@ -29,26 +49,39 @@
   letter-spacing: 0.75px;
   text-decoration: none;
   color: $trueBlack;
+}
 
+.site-nav__dropdown-button {
+  position: relative;
+  margin: 0;
+  padding: 0 24px 0 0;
 
-  &--dropdown {
-    position: relative;
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  text-decoration: none;
+  color: $trueBlack;
 
-    padding-right: 24px;
+  background: none;
+  border: none;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      right: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
 
-      display: block;
-      width: 16px;
-      height: 10px;
+    display: block;
+    width: 16px;
+    height: 16px;
 
-      background-image: url("../img/chevron-down.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
+    background-image: url("../img/chevron-down.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    transform: translateY(-6px);
   }
 }
