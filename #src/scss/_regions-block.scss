@@ -36,7 +36,8 @@
 
 .region-crimea {
     background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: cover;
+    background-size: 100% 100%;
+    transition: background-size .3s ease-in;
     background-image: url(../img/img-regions-krim.png);
     background-repeat: no-repeat;
     width: 308px;
@@ -44,23 +45,37 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
+.region-crimea:hover {
+    background-size: 105% 105%;
+    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
+}
 .region-kunan {
     background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: cover;
+    background-size: 100% 100%;
+    transition: background-size .3s ease-in;
     background-image: url(../img/img-regions-kuban.png);
     background-repeat: no-repeat;
     width: 308px;
     height: 200px;
 }
+.region-kunan:hover {
+    background-size: 105% 105%;
+    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
+}
 .region-caucasus {
     background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: cover;
+    background-size: 100% 100%;
+    transition: background-size .3s ease-in;
     background-image: url(../img/img-regions-caucasus.png);
     background-repeat: no-repeat;
     width: 308px;
     height: 200px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+}
+.region-caucasus:hover {
+    background-size: 105% 105%;
+    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
 }
 
 @media screen and (min-width: 720px) {
@@ -85,6 +100,27 @@
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
     }
+    .regions-block__item__name-crimea {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(30%, 250%);
+    }
+    .regions-block__item__name-kuban {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(30%, 250%);
+    }
+    .regions-block__item__name-caucasus {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(30%, 250%);
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -108,5 +144,26 @@
         border-bottom-left-radius: 0;
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
+    }
+    .regions-block__item__name-crimea {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(36%, 250%);
+    }
+    .regions-block__item__name-kuban {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(36%, 250%);
+    }
+    .regions-block__item__name-caucasus {
+        font-size: 56px;
+        color: $trueWhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(36%, 250%);
     }
 }
