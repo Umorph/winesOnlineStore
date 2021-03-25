@@ -1,0 +1,122 @@
+﻿.regions-block__items {
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+    font-family: 'Amatic SC', cursive;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.regions-block__item {
+    margin: 4px;
+}
+
+.regions-block__item__name-crimea {
+    font-size: 56px;
+    color: $trueWhite;
+    top: 50%;
+    left: 50%;
+    transform: translate(36%, 110%);
+}
+.regions-block__item__name-kuban {
+    font-size: 56px;
+    color: $trueWhite;
+    top: 50%;
+    left: 50%;
+    transform: translate(36%, 110%);
+}
+.regions-block__item__name-caucasus {
+    font-size: 56px;
+    color: $trueWhite;
+    top: 50%;
+    left: 50%;
+    transform: translate(36%, 110%);
+}
+
+.region-crimea {
+    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
+    background-size: cover;
+    background-image: url(../img/img-regions-krim.png);
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 200px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.region-kunan {
+    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
+    background-size: cover;
+    background-image: url(../img/img-regions-kuban.png);
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 200px;
+}
+.region-caucasus {
+    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
+    background-size: cover;
+    background-image: url(../img/img-regions-caucasus.png);
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 200px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+@media screen and (min-width: 720px) {
+    .regions-block__items {
+        flex-direction: row;
+        margin: auto;
+        width: 800px;
+    }
+
+    .region-crimea {
+        width: 221.33px;
+        height: 400px;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .region-kuban {
+        width: 221.33px !important;
+        height: 400px;
+    }
+    .region-caucasus {
+        width: 221.33px;
+        height: 400px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .regions-block__items {
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .region-crimea {
+        width: 396,67px;
+        height: 400px;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .region-kuban {
+        width: 396,67px;
+        height: 400px;
+        border: none;
+    }
+    .region-caucasus {
+        width: 396,67px;
+        height: 400px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
