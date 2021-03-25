@@ -1,0 +1,54 @@
+.site-nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  list-style: none;
+}
+
+.site-nav__item {
+  margin: 0;
+  padding: 10px 20px 12px 20px;
+
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+
+.site-nav__link {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  text-decoration: none;
+  color: $trueBlack;
+
+
+  &--dropdown {
+    position: relative;
+
+    padding-right: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      display: block;
+      width: 16px;
+      height: 10px;
+
+      background-image: url("../img/chevron-down.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}
