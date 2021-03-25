@@ -28,6 +28,8 @@
 
   display: none;
 
+  z-index: 5;
+
   &:hover {
     display: table;
   }
