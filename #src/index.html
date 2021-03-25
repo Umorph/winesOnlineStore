@@ -5,11 +5,50 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Своё вино | Главная</title>
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+        <nav class="header__navigation-wrapper">
+          <ul class="header__site-nav site-nav">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--dropdown" href="#">Подобрать вино</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Как заказать</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="header__user-nav user-nav">
+            <li class="user-nav__item">
+              <a class="user-nav__cart-link" href="#">
+                <span class="user-nav__cart-counter">3</span>
+                <span class="visually-hidden">Корзина товаров</span>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a class="user-nav__favorite-link" href="#">
+                <span class="user-nav__favorite-counter">5</span>
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__burger-button" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   <main class="main-content">
     <section class="main-content__recommend-products products">
       <h1 class="products__title">
