@@ -1,0 +1,23 @@
+.main-content {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-content__keyvisual {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content__excerpt {
+  margin: 120px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0;
+  }
+}
