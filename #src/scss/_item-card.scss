@@ -1,0 +1,213 @@
+.item-card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  background: $trueWhite;
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.04),
+  0px 7.7037px 19.1111px rgba(0, 0, 0, 0.0242963),
+  0px 1.62963px 4.88889px rgba(0, 0, 0, 0.0157037);
+  border-radius: 12px;
+}
+
+.item-card__link {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+
+  text-decoration: none;
+}
+
+.item-card__content {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-card__image-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px 14px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 720px) {
+    &--big {
+      padding: 44px 14px;
+    }
+  }
+}
+
+.item-card__image {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+
+.item-card__description {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px;
+  align-self: stretch;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &--big {
+    padding: 24px;
+  }
+
+  @media screen and (min-width: 720px) {
+    padding: 24px;
+  }
+}
+
+.item-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.88);
+
+  background-color: $yellowMain;
+  border-radius: 6px;
+
+  &--green {
+    background-color: $green;
+  }
+
+  &--blue {
+    background-color: $cyan;
+  }
+}
+
+.item-card__wine-name {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba($trueBlack, 0.88);
+
+  &--big {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media screen and (min-width: 720px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.item-card__wine-type {
+  margin: 12px 0 auto;
+  padding: 0;
+  min-height: 32px;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.6);
+
+  @media screen and (min-width: 720px) {
+    min-height: initial;
+  }
+}
+
+.item-card__price-wrapper {
+  margin: 16px 0 0;
+  padding: 0;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--big {
+    margin: 24px 0 0;
+  }
+
+  @media screen and (min-width: 720px) {
+    margin: 24px 0 0;
+  }
+}
+
+.item-card__price {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.88);
+
+  &--big {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media screen and (min-width: 720px) {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.item-card__volume {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.6);
+
+  &--big {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media screen and (min-width: 720px) {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
