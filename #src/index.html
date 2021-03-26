@@ -209,77 +209,106 @@
       </section>
 
       <section class="main-content__recommend-products products">
-        <h1 class="products__title">
-          Первое, что хочется предложить
-        </h1>
-        <div class="products__items">
-          <div class="products__item item1">
-            <img class="products__item__img" src="img/Krim-summer.png" alt="Крымское лето">
-            <div class="products__item__badge products__item__badge-crimea">Крым</div>
-            <div class="item__content">
-              <h2 class="products__item__name">Крымское лето</h2>
-              <p class="products__item__description">Красное, полусухое</p>
-              <div class="products__item__other">
-                <h3 class="products__item__price">1200 ₽</h3>в тр
-                <h4 class="products__item__volume">0.7L</h4>
-              </div>
-            </div>
-          </div>
-          <div class="products__item item2">
-            <img class="products__item__img" src="img/Renessans.png" alt="Ренессанс">
-            <div class="products__item__badge products__item__badge-kuban">Кубань</div>
-            <div class="item__content">
-              <h2 class="products__item__name">Ренессанс</h2>
-              <p class="products__item__description">Белое, полусладкое</p>
-              <div class="products__item__other">
-                <h3 class="products__item__price">900 ₽</h3>
-                <h4 class="products__item__volume">0.72L</h4>
-              </div>
-            </div>
-          </div>
-          <div class="products__item products__item-big item3">
-            <picture class="products__item__img">
-              <source media="(min-width: 720px)" srcset="img/Solaris-big.png">
-              <source media="(max-width: 719px)" srcset="img/Solaris.png">
-              <img src="img/Solaris-big.png">
-          </picture>
-            <div class="products__item__badge products__item__badge-caucasus">Кавказ</div>
-            <div class="item__content">
-              <h2 class="products__item__name">Солярис</h2>
-              <p class="products__item__description">Белое, сухое</p>
-              <div class="products__item__other">
-                <h3 class="products__item__price">1350 ₽</h3>
-                <h4 class="products__item__volume">0.65L</h4>
-              </div>
-            </div>
-          </div>
-          <div class="products__item item4">
-            <img class="products__item__img" src="img/Krim-somelie.png" alt="Крымский сомелье">
-            <div class="products__item__badge products__item__badge-crimea">Крым</div>
-            <div class="item__content">
-              <h2 class="products__item__name">Крымское лето</h2>
-              <p class="products__item__description">Красное, сухое</p>
-              <div class="products__item__other">
-                <h3 class="products__item__price">1100 ₽</h3>
-                <h4 class="products__item__volume">0.6L</h4>
-              </div>
-            </div>
-          </div>
-          <div class="products__item item5">
-            <img class="products__item__img" src="img/sourse-capital.png" alt="Южная столица">
-            <div class="products__item__badge products__item__badge-kuban">Кубань</div>
-            <div class="item__content">
-              <h2 class="products__item__name">Южная столица</h2>
-              <p class="products__item__description">Игристое, полусладкое</p>
-              <div class="products__item__other">
-                <h3 class="products__item__price">680 ₽</h3>
-                <h4 class="products__item__volume">0.7L</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="products__btn">Смотреть все вина</button>
+        <h2 class="products__heading">Первое, что хочется предложить</h2>
+        <ul class="products__layout">
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-krim-summer.jpg" alt="Вино «Крымское лето»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge">Крым</span>
+                  <h3 class="item-card__wine-name">Крымское лето</h3>
+                  <p class="item-card__wine-type">Красное, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">1200 ₽</p>
+                    <p class="item-card__volume">0.7L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-renessans.jpg" alt="Вино «Ренессанс»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge item-card__badge--green">Кубань</span>
+                  <h3 class="item-card__wine-name">Ренессанс</h3>
+                  <p class="item-card__wine-type">Белое, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">900 ₽</p>
+                    <p class="item-card__volume">0.72L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item products__item--big item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper item-card__image-wrapper--big">
+                  <picture>
+                    <source srcset="img/item-solaris-big.webp" media="(min-width: 720px)" type="image/webp">
+                    <source srcset="img/item-solaris-big.jpg" media="(min-width: 720px)">
+                    <source srcset="img/item-solaris.webp" type="image/webp">
+                    <img class="item-card__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
+                  </picture>
+                </div>
+                <figcaption class="item-card__description item-card__description--big">
+                  <span class="item-card__badge item-card__badge--blue">Кавказ</span>
+                  <h3 class="item-card__wine-name item-card__wine-name--big">Солярис</h3>
+                  <p class="item-card__wine-type">Белое, сухое</p>
+                  <div class="item-card__price-wrapper item-card__price-wrapper--big">
+                    <p class="item-card__price item-card__price--big">1350 ₽</p>
+                    <p class="item-card__volume item-card__volume--big">0.65L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-krim-somelie.jpg" alt="Вино «Крымский сомелье»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge">Крым</span>
+                  <h3 class="item-card__wine-name">Крымский сомелье</h3>
+                  <p class="item-card__wine-type">Белое, сухое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">1350 ₽</p>
+                    <p class="item-card__volume">0.65L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-south-capital.jpg" alt="Вино «Южная столица»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge item-card__badge--green">Кубань</span>
+                  <h3 class="item-card__wine-name">Южная столица</h3>
+                  <p class="item-card__wine-type">Игристое, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">680 ₽</p>
+                    <p class="item-card__volume">0.7L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
       </section>
+
       <section class="main-content__regions-block">
         <div class="regions-block__items">
           <div class="regions-block__item region-crimea">
