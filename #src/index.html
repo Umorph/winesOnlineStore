@@ -13,9 +13,11 @@
     @@include('_header.html')
     <main class="main-content">
       <h1 class="visually-hidden">Интернет магазин крафтового вина «Своё вино»</h1>
+
       <section class="main-content__keyvisual keyvisual">
         <!-- TODO разметка блока keyvisual-->
       </section>
+
       <div class="main-content__excerpt excerpt">
         <h2 class="excerpt__heading visually-hidden">Как получается наше вино</h2>
         <p class="excerpt__text">
@@ -24,11 +26,112 @@
           по достоинству.
         </p>
       </div>
+
       <section class="main-content__authors authors">
         <!-- TODO разметка блока с авторами -->
       </section>
 
-      @@include('_products.html')
+      <section class="main-content__recommend-products products">
+        <h2 class="products__heading">Первое, что хочется предложить</h2>
+        <ul class="products__layout">
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-krim-summer.jpg" alt="Вино «Крымское лето»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge">Крым</span>
+                  <h3 class="item-card__wine-name">Крымское лето</h3>
+                  <p class="item-card__wine-type">Красное, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">1200 ₽</p>
+                    <p class="item-card__volume">0.7L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-renessans.jpg" alt="Вино «Ренессанс»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge item-card__badge--green">Кубань</span>
+                  <h3 class="item-card__wine-name">Ренессанс</h3>
+                  <p class="item-card__wine-type">Белое, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">900 ₽</p>
+                    <p class="item-card__volume">0.72L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item products__item--big item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper item-card__image-wrapper--big">
+                  <picture>
+                    <source srcset="img/item-solaris-big.webp" media="(min-width: 720px)" type="image/webp">
+                    <source srcset="img/item-solaris-big.jpg" media="(min-width: 720px)">
+                    <source srcset="img/item-solaris.webp" type="image/webp">
+                    <img class="item-card__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
+                  </picture>
+                </div>
+                <figcaption class="item-card__description item-card__description--big">
+                  <span class="item-card__badge item-card__badge--blue">Кавказ</span>
+                  <h3 class="item-card__wine-name item-card__wine-name--big">Солярис</h3>
+                  <p class="item-card__wine-type">Белое, сухое</p>
+                  <div class="item-card__price-wrapper item-card__price-wrapper--big">
+                    <p class="item-card__price item-card__price--big">1350 ₽</p>
+                    <p class="item-card__volume item-card__volume--big">0.65L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-krim-somelie.jpg" alt="Вино «Крымский сомелье»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge">Крым</span>
+                  <h3 class="item-card__wine-name">Крымский сомелье</h3>
+                  <p class="item-card__wine-type">Белое, сухое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">1350 ₽</p>
+                    <p class="item-card__volume">0.65L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="products__item item-card">
+            <a class="item-card__link" href="#">
+              <figure class="item-card__content">
+                <div class="item-card__image-wrapper">
+                  <img class="item-card__image" src="img/item-south-capital.jpg" alt="Вино «Южная столица»">
+                </div>
+                <figcaption class="item-card__description">
+                  <span class="item-card__badge item-card__badge--green">Кубань</span>
+                  <h3 class="item-card__wine-name">Южная столица</h3>
+                  <p class="item-card__wine-type">Игристое, полусладкое</p>
+                  <div class="item-card__price-wrapper">
+                    <p class="item-card__price">680 ₽</p>
+                    <p class="item-card__volume">0.7L</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+        <a class="products__more-link" href="#">Смотреть все вина</a>
+      </section>
 
       <section class="main-content__regions-block">
         <div class="regions-block__items">
@@ -44,7 +147,16 @@
         </div>
       </section>
 
-      @@include('_link-instagram.html')
+      <section class="main-content__link">
+        <div class="link__content">
+          <span class="link__title">Следите за новинками</span>
+          <span class="link__subtitle">Новые фото и интересные истории о винах в нашем Instagram</span>
+          <a href="#"><button class="link__btn">
+            <img class="link__btn__img" src="img/icon-instagram.png" alt="">
+            <span class="link__text">Наш Instagram</span>
+          </button></a>
+        </div>
+      </section>
   </main>
 
     <script src="js/index.min.js"></script>
