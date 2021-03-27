@@ -1,0 +1,162 @@
+﻿// Стили для заголовка
+.hto__heading {
+    padding: 0;
+
+    font-family: $amatic;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    color: rgba($trueBlack, 0.88);
+
+    @media screen and (min-width: 720px) {
+        font-weight: 700;
+        font-size: 112px;
+        line-height: 120px;
+        letter-spacing: -2px;
+        margin: auto;
+    }
+}
+
+// Стили для блока "Инфо" ( bgc: cyan-info )
+.hto__info {
+    position: relative;
+    background-color: $cyan-info;
+    border-radius: 12px;
+
+    display: flex;
+    margin: auto;
+
+    max-width: 936px;
+
+    @media screen and (min-width: 843px) {
+        align-items: center;
+    }
+}
+
+.hto__info__img {
+    position: absolute;
+    margin: 24px 0 0 24px;
+    @media screen and (min-width: 843px) {
+        margin: 0 0 0 24px;
+    }
+}
+
+.hto__info__text {
+    margin: 0 24px 0 96px;
+
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+}
+
+// Стили для Блока с инструкцией "Всё просто:"
+.test {
+    margin: auto;
+}
+
+.hto__instruction {
+    margin: 0;
+    text-align: left;
+    @media screen and (min-width: 595px) {
+        margin-left: 0;
+    }
+}
+
+.hto__instruction__title {
+    margin: auto;
+    padding: 0;
+
+    font-family: $amatic;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    color: rgba($trueBlack, 0.88);
+
+    @media screen and (min-width: 720px) {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 88px;
+        letter-spacing: -1px;
+    }
+}
+
+.hto__instruction__list {
+    margin: 6px 0 120px 0;
+    padding: 18px;
+}
+
+.hto__instruction__list__item {
+    margin: 16px 0;
+    padding: 0 0 0 56px;
+
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+    &:first-child {
+        margin: 0 0 16px 0;
+    }
+    &:last-child {
+        margin: 16px 0 0 0;
+    }
+}
+
+.hto__instruction__link {
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+}
+
+// Стили для Блока с картинкой "Доставим вино в нашей крафтовой упаковке."
+.hto__delivery {
+    padding: 16px;
+    margin: auto;
+    text-align: center;
+    color: rgba($color: $trueBlack, $alpha: 0.6);
+}
+
+.hto__delivery__img {
+    max-width: 100%;
+}
+
+.hto__delivery__desc {
+    margin: 0 24px;
+}
+
+.hto__delivery__q {
+    text-align: left;
+    margin: 120px auto 0;
+    padding: 0 16px;
+    max-width: 936px;
+}
+
+.hto__delivery__title {
+    margin: auto;
+    padding: 0;
+
+    font-family: $amatic;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    color: rgba($trueBlack, 0.88);
+
+    @media screen and (min-width: 720px) {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 88px;
+        letter-spacing: -1px;
+    }
+}
+
+.delivery-info {
+    background-color: $amber;
+    margin: 0 auto 120px ;
+}
