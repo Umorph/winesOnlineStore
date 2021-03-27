@@ -65,3 +65,28 @@
     }
   }
 }
+
+.products__more-link {
+  box-sizing: border-box;
+  margin: 50px 0 0;
+  padding: 14px 0;
+  width: 100%;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba($trueBlack, 0.88);
+
+  border: 2px solid $yellowMain;
+  border-radius: 12px;
+
+  @media screen and (min-width: 720px) {
+    padding: 14px 24px 18px;
+    width: auto;
+  }
+}
