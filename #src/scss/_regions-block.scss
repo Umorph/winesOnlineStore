@@ -1,173 +1,98 @@
-﻿.main-content__regions-block {
-    margin: 120px auto 110px;
+﻿.regions-block {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.regions-block__items {
-    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-    font-family: 'Amatic SC', cursive;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+.regions-block__list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 4px;
+  width: 100%;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  list-style: none;
+
+  @media screen and (min-width: 720px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .regions-block__item {
-    margin: 4px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
-.regions-block__item__name-crimea {
-    font-size: 56px;
-    color: $trueWhite;
-    top: 50%;
-    left: 50%;
-    transform: translate(36%, 110%);
-}
-.regions-block__item__name-kuban {
-    font-size: 56px;
-    color: $trueWhite;
-    top: 50%;
-    left: 50%;
-    transform: translate(36%, 110%);
-}
-.regions-block__item__name-caucasus {
-    font-size: 56px;
-    color: $trueWhite;
-    top: 50%;
-    left: 50%;
-    transform: translate(36%, 110%);
-}
+.regions-block__link {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 68px 0;
 
-.region-crimea {
-    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: 100% 100%;
-    transition: background-size .3s ease-in;
-    background-image: url(../img/img-regions-krim.png);
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 64px;
+  text-decoration: none;
+  text-align: center;
+  color: $trueWhite;
+
+  text-shadow: 0px 56px 56px rgba(0, 0, 0, 0.157037),
+  0px 21.5704px 17.837px rgba(0, 0, 0, 0.242963),
+  0px 4.56296px 4.56296px rgba(0, 0, 0, 0.4);
+
+  //filter: sepia(65%) contrast(90%) hue-rotate(-10deg) saturate(140%);
+
+  &--crimea {
+    background-image: url("../img/img-regions-krim.jpg");
+    background-position: center;
     background-repeat: no-repeat;
-    width: 308px;
-    height: 200px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
-.region-crimea:hover {
-    background-size: 102% 102%;
-    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
-}
-.region-kunan {
-    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: 100% 100%;
-    transition: background-size .3s ease-in;
-    background-image: url(../img/img-regions-kuban.png);
+    background-size: 100% auto;
+  }
+
+  &--cuban {
+    background-image: url("../img/img-regions-cuban.jpg");
+    background-position: center;
     background-repeat: no-repeat;
-    width: 308px;
-    height: 200px;
-}
-.region-kunan:hover {
-    background-size: 102% 102%;
-    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
-}
-.region-caucasus {
-    background: linear-gradient(0deg, rgba(185, 121, 46, 0.2), rgba(185, 121, 46, 0.2));
-    background-size: 100% 100%;
-    transition: background-size .3s ease-in;
-    background-image: url(../img/img-regions-caucasus.png);
+    background-size: 100% auto;
+  }
+
+  &--caucasus {
+    background-image: url("../img/img-regions-caucasus.jpg");
+    background-position: center;
     background-repeat: no-repeat;
-    width: 308px;
-    height: 200px;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-}
-.region-caucasus:hover {
-    background-size: 102% 102%;
-    box-shadow:0 0 0 128px rgba(0, 0, 0, 0.1) inset;
-}
+    background-size: 100% auto;
+  }
 
-@media screen and (min-width: 720px) {
-    .regions-block__items {
-        flex-direction: row;
-    }
+  @media screen and (min-width: 425px) {
+    padding: 93px 0;
+  }
 
-    .regions-block__item {
-        width: 221.33px;
-        height: 400px;
-    }
+  @media screen and (min-width: 720px) {
+    padding: 168px 0;
+    background-size: cover;
+  }
 
-    .region-crimea {
-        border-top-left-radius: 16px;
-        border-bottom-left-radius: 16px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    .region-caucasus {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-    .regions-block__item__name-crimea {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(30%, 250%);
-    }
-    .regions-block__item__name-kuban {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(30%, 250%);
-    }
-    .regions-block__item__name-caucasus {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(30%, 250%);
-    }
-}
+  @media screen and (min-width: 1200px) {
+    padding: 140px 0;
 
-@media screen and (min-width: 1200px) {
-    .regions-block__items {
-        flex-direction: row;
-    }
-
-    .regions-block__item {
-        width: 396.67px;
-        height: 400px;
-    }
-
-    .region-crimea {
-        border-top-left-radius: 16px;
-        border-bottom-left-radius: 16px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    .region-caucasus {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-    .regions-block__item__name-crimea {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(36%, 250%);
-    }
-    .regions-block__item__name-kuban {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(36%, 250%);
-    }
-    .regions-block__item__name-caucasus {
-        font-size: 56px;
-        color: $trueWhite;
-        top: 50%;
-        left: 50%;
-        transform: translate(36%, 250%);
-    }
+    font-size: 112px;
+    line-height: 120px;
+    letter-spacing: -2px;
+  }
 }
