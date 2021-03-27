@@ -56,6 +56,8 @@
   0px 21.5704px 17.837px rgba(0, 0, 0, 0.242963),
   0px 4.56296px 4.56296px rgba(0, 0, 0, 0.4);
 
+  transition: background-size .3s ease;
+
   //filter: sepia(65%) contrast(90%) hue-rotate(-10deg) saturate(140%);
 
   &--crimea {
@@ -79,13 +81,25 @@
     background-size: 100% auto;
   }
 
+  &:hover,
+  &:focus {
+    background-size: 110% auto;
+  }
+
   @media screen and (min-width: 425px) {
     padding: 93px 0;
   }
 
   @media screen and (min-width: 720px) {
     padding: 168px 0;
-    background-size: cover;
+    background-size: auto 100%;
+
+    @include smooth;
+
+    &:hover,
+    &:focus {
+      background-size: auto 110%;
+    }
   }
 
   @media screen and (min-width: 1200px) {
