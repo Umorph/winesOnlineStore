@@ -12,6 +12,7 @@
 // Стили для заголовка
 .hto__heading {
     padding: 0;
+    margin: 48px auto;
 
     font-family: $amatic;
     font-weight: 700;
@@ -37,12 +38,18 @@
     border-radius: 12px;
 
     display: flex;
-    margin: auto;
+    margin: 0 16px 120px 16px;
 
     max-width: 936px;
 
+    @media screen and (min-width: 720px) {
+        margin: 0 48px 120px 48px;
+    }
     @media screen and (min-width: 843px) {
         align-items: center;
+    }
+    @media screen and (min-width: 969px) {
+        margin: 0 auto 120px;
     }
 }
 
@@ -72,10 +79,13 @@
 }
 
 .instruction {
-    margin: 0;
+    margin: 0 16px;
     text-align: left;
-    @media screen and (min-width: 595px) {
-        margin-left: 0;
+    @media screen and (min-width: 720px) {
+        margin: 0 48px 0 48px;
+    }
+    @media screen and (min-width: 969px) {
+        margin: 0 auto;
     }
 }
 
@@ -127,10 +137,15 @@
 
 // Стили для Блока с картинкой "Доставим вино в нашей крафтовой упаковке."
 .delivery {
-    padding: 16px;
-    margin: auto;
+    margin: 0 16px;
     text-align: center;
     color: rgba($color: $trueBlack, $alpha: 0.6);
+    @media screen and (min-width: 720px) {
+        margin: 0 48px;
+    }
+    @media screen and (min-width: 800px) {
+        margin: 0 auto;
+    }
 }
 
 .delivery__img {
@@ -141,11 +156,16 @@
     margin: 0 24px;
 }
 
-.delivery-textBlock {
+.delivery__textBlock {
     text-align: left;
-    margin: 120px auto 0;
-    padding: 0 16px;
+    margin: 120px 16px 0 16px;
     max-width: 936px;
+    @media screen and (min-width: 720px) {
+        margin: 120px 48px 0 48px;
+    }
+    @media screen and (min-width: 969px) {
+        margin: 120px auto 0;
+    }
 }
 
 .delivery__textBlock__title {
@@ -167,7 +187,60 @@
     }
 }
 
+.delivery__textBlock__text {
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba($trueBlack, 0.88);
+}
+
 .delivery-info {
     background-color: $amber;
-    margin: 0 auto 120px ;
+    margin: 0 16px 120px 16px;
+    display: flex;
+    border-radius: 12px;
+
+    max-width: 936px;
+
+    @media screen and (min-width: 720px) {
+        margin: 0 48px 120px 48px;
+    }
+    @media screen and (min-width: 843px) {
+        align-items: center;
+    }
+    @media screen and (min-width: 969px) {
+        margin: auto;
+    }
+}
+
+.delivery-info__img {
+    position: absolute;
+    margin: 24px 0 0 24px;
+    @media screen and (min-width: 598px) {
+        margin: 16px 0 0 24px;
+    }
+    @media screen and (min-width: 843px) {
+        margin: 3px 0 0 24px;
+    }
+}
+
+.delivery-info__text {
+    margin: 0 24px 0 96px;
+
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+}
+
+.hto-content__inst {
+    margin: 120px 0 0 0;
+    @media screen and (min-width: 720px) {
+        margin: 120px auto;
+    }
 }
