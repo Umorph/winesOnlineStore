@@ -22,3 +22,14 @@ document.addEventListener('click', function (elem) {
     toggleOffcanvas();
   }
 })
+
+// document.addEventListener('click', function(elem) {
+//   const target = elem.target;
+//   const its_menu = target == offcanvasWindow || offcanvasWindow.contains(target);
+//   const its_button = target == offcanvasButton;
+//   const menu_is_active = offcanvasWindow.classList.contains('open');
+//
+//   if (!its_menu && !its_button && menu_is_active) {
+//     toggleOffcanvas();
+//   }
+// });
