@@ -11,66 +11,65 @@
 </head>
 <body>
     @@include('_header.html')
-    <main class="main-content">
-        <h2 class="hto__heading">Как заказать своё вино</h2>
+    <main class="hto-content">
+        <h2 class="hto-content__hto__heading hto__heading">Как заказать своё вино</h2>
 
-        <div class="hto__info">
-            <div class="hto__info__img">
+        <div class="hto-content__info hto__info">
+            <div class="hto-content__info__img info__img">
                 <img src="img/info-circle.png" alt="">
             </div>
-            <div class="hto__info__text">
+            <div class="hto-content__info__text info__text">
                 <p>
                     У нас тут не интернет-магазин, как бы не казалось. Согласно законам РФ, мы не можем продавать алкоголь прямо на сайте, но вы можете его заказать. Ниже расскажем как.
                 </p>
             </div>
         </div>
 
-        <div class="test">
-            <div class="hto__instruction">
-                <h2 class="hto__instruction__title">Всё просто:</h2>
-                <ol class="hto__instruction__list">
-                    
-                    <li class="hto__instruction__list__item">
-                        <a class="hto__instruction__link" href="#">Выберите вино</a> (или даже несколько), добавьте в корзину.
-                    </li>
-                    
-                    <li class="hto__instruction__list__item">
-                        Перейдите в <a class="hto__instruction__link" href="#">корзину</a>, оформите заказ.
-                    </li>
-                    
-                    <li class="hto__instruction__list__item">
-                        Ответьте на звонок нашего дружелюбного менеджера.
-                    </li>
-                    
-                    <li class="hto__instruction__list__item">
-                        Заберите заказ на почте или дождитесь курьера.
-                    </li>
-                    
-                    <li class="hto__instruction__list__item">
-                        Подпишитесь на <a class="hto__instruction__link" href="#">наш Instagram</a> 😉 и приходите к нам ещё!
-                    </li>
-                    
-                </ol>
-            </div>
+        <div class="hto-content__instruction instruction">
+            <h2 class="hto-content__instruction__title instruction__title">Всё просто:</h2>
+            <ol class="hto-content__instruction__list instruction__list">
+                
+                <li class="hto-content__instruction__list__item list__item">
+                    <a class="list__item__link" href="#">Выберите вино</a> (или даже несколько), добавьте в корзину.
+                </li>
+                
+                <li class="hto-content__instruction__list__item list__item">
+                    Перейдите в <a class="list__item__link" href="#">корзину</a>, оформите заказ.
+                </li>
+                
+                <li class="hto-content__instruction__list__item list__item">
+                    Ответьте на звонок нашего дружелюбного менеджера.
+                </li>
+                
+                <li class="hto-content__instruction__list__item list__item">
+                    Заберите заказ на почте или дождитесь курьера.
+                </li>
+                
+                <li class="hto-content__instruction__list__item list__item">
+                    Подпишитесь на <a class="list__item__link" href="#">наш Instagram</a> 😉 и приходите к нам ещё!
+                </li>
+                
+            </ol>
         </div>
 
-        <figure class="hto__delivery">
-            <p><img class="hto__delivery__img" src="img/kraft-vine.png" alt=""></p>
-            <figcaption class="hto__delivery__desc">Доставим вино в нашей крафтовой упаковке.</figcaption>
+
+        <figure class="hto-content__delivery delivery">
+            <p><img class="delivery__img" src="img/kraft-vine.png" alt=""></p>
+            <figcaption class="delivery__desc">Доставим вино в нашей крафтовой упаковке.</figcaption>
         </figure>
 
-        <div class="hto__delivery__q">
-            <h2 class="hto__delivery__title">Доставка:</h2>
-            <p class="hto__delivery__text">
+        <div class="hto-content__delivery__textBlock delivery__textBlock">
+            <h2 class="delivery__textBlock__title">Доставка:</h2>
+            <p class="delivery__textBlock__text">
                 Почтой России или любой транспортной компанией (СДЭК, Деловые линии, DHL и др.) по всей России. По Москве доставим бесплатно, а в другие регионы стоимость доставки учтонит менеджер, когда позвонит для подтверждения заказа.
             </p>
         </div>
 
-        <div class="hto__info delivery-info">
-            <div class="hto__info__img">
+        <div class="hto-content__delivery-info delivery-info">
+            <div class="delivery-info__img">
                 <img src="img/delivery-icon.png" alt="">
             </div>
-            <div class="hto__info__text">
+            <div class="delivery-info__text">
                 <p>
                     Упакуем аккуратно и надёжно, так что ничего не разобъётся. Даже если через Почту России. Проверено.
                 </p>
@@ -78,7 +77,17 @@
         </div>
 
         @@include('_products.html')
-        @@include('_link-instagram.html')
+
+        <section class="main-content__inst inst">
+            <div class="inst__inner">
+                <h2 class="inst__heading">Следите за новинками</h2>
+                <p class="inst__text">
+                Новые фото и интересные истории о винах в нашем Instagram
+                </p>
+                <a class="inst__link" href="#" target="_blank">Наш Instagram</a>
+            </div>
+        </section>
+
     </main>
 </body>
 </html>

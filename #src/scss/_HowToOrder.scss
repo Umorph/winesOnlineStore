@@ -1,4 +1,15 @@
-﻿// Стили для заголовка
+﻿
+.hto-content {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+// Стили для заголовка
 .hto__heading {
     padding: 0;
 
@@ -35,7 +46,7 @@
     }
 }
 
-.hto__info__img {
+.info__img {
     position: absolute;
     margin: 24px 0 0 24px;
     @media screen and (min-width: 843px) {
@@ -43,7 +54,7 @@
     }
 }
 
-.hto__info__text {
+.info__text {
     margin: 0 24px 0 96px;
 
     font-family: $ubuntu;
@@ -60,7 +71,7 @@
     margin: auto;
 }
 
-.hto__instruction {
+.instruction {
     margin: 0;
     text-align: left;
     @media screen and (min-width: 595px) {
@@ -68,7 +79,7 @@
     }
 }
 
-.hto__instruction__title {
+.instruction__title {
     margin: auto;
     padding: 0;
 
@@ -87,12 +98,12 @@
     }
 }
 
-.hto__instruction__list {
+.instruction__list {
     margin: 6px 0 120px 0;
     padding: 18px;
 }
 
-.hto__instruction__list__item {
+.list__item {
     margin: 16px 0;
     padding: 0 0 0 56px;
 
@@ -110,34 +121,34 @@
     }
 }
 
-.hto__instruction__link {
+.list__item__link {
     color: rgba($color: $trueBlack, $alpha: 0.88);
 }
 
 // Стили для Блока с картинкой "Доставим вино в нашей крафтовой упаковке."
-.hto__delivery {
+.delivery {
     padding: 16px;
     margin: auto;
     text-align: center;
     color: rgba($color: $trueBlack, $alpha: 0.6);
 }
 
-.hto__delivery__img {
+.delivery__img {
     max-width: 100%;
 }
 
-.hto__delivery__desc {
+.delivery__desc {
     margin: 0 24px;
 }
 
-.hto__delivery__q {
+.delivery-textBlock {
     text-align: left;
     margin: 120px auto 0;
     padding: 0 16px;
     max-width: 936px;
 }
 
-.hto__delivery__title {
+.delivery__textBlock__title {
     margin: auto;
     padding: 0;
 
