@@ -36,3 +36,12 @@
   margin: 120px auto 0;
   padding: 0 16px;
 }
+
+.main-content__catalog {
+  margin: 24px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 48px auto 0;
+  }
+}
