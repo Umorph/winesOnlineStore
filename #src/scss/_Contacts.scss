@@ -1,0 +1,152 @@
+﻿.contacts-content {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media screen and (min-width: 1600px) {
+        margin: 0 0 16px 0;
+    }
+}
+
+// Стили для заголовка
+.contacts__heading {
+    padding: 0;
+    margin: 40px 16px 48px 16px;
+
+    font-family: $amatic;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    color: rgba($trueBlack, 0.88);
+    
+
+    @media screen and (min-width: 410px) {
+        margin: 40px auto 48px;
+    }
+    @media screen and (min-width: 720px) {
+        font-weight: 700;
+        font-size: 112px;
+        line-height: 120px;
+        letter-spacing: -2px;
+        margin: 40px auto 48px;
+    }
+    @media screen and (min-width: 810px) {
+        margin: 40px auto 48px;
+    }
+}
+
+.contacts__info {
+    background-color: $gray;
+    margin: 0 16px 48px 16px;
+    border-radius: 12px;
+    max-width: 936px;
+
+    @media screen and (min-width: 720px) {
+        margin: 0 48px 48px 48px;
+    }
+    @media screen and (min-width: 1030px) {
+        margin: 0 auto 48px;
+    }
+}
+
+.contacts__info--text {
+    font-family: $ubuntu;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+    text-align: center;
+    margin: 0;
+    padding: 24px 16px;
+    
+    @media screen and (min-width: 720px) {
+        padding: 48px;
+    }
+}
+
+//Стили для блока с контактами
+.contacts-content__links {
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    grid-row-gap: 48px;
+
+    @media screen and (min-width: 720px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+    }
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 0;
+    }
+}
+
+.links-items {
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: 720px) {
+        width: 324px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 283.5px;
+    }
+    @media screen and (min-width: 1600px) {
+        width: 336px;
+    }
+}
+
+.links-item {
+    text-align: center;
+    align-items: center;
+}
+
+.links-item__img--shell {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: $amber;
+    border-radius: 24px;
+    margin: auto;
+}
+
+.links-item__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.links-item__desc {
+    font-family: $ubuntu;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.75px;
+    color: rgba($color: $trueBlack, $alpha: 0.6);
+    margin: 24px auto 8px;
+}
+
+.links-item--text {
+    margin: 0;
+    font-family: $ubuntu;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba($color: $trueBlack, $alpha: 0.88);
+}

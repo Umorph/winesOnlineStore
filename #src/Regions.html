@@ -5,78 +5,115 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Своё вино | Как заказать</title>
+    <title>Своё вино | Регионы / Кубань</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     @@include('_header.html')
-    <main class="hto-content">
-        <h2 class="hto-content__hto__heading hto__heading">Как заказать своё вино</h2>
 
-        <div class="hto-content__info hto__info">
-            <div class="hto-content__info__img info__img">
-                <img src="img/info-circle.png" alt="Иконка 'информационный знак'">
-            </div>
-            <div class="hto-content__info__text info__text">
-                <p class="hto-content__info__text">
-                    У нас тут не интернет-магазин, как бы не казалось. Согласно законам РФ, мы не можем продавать алкоголь прямо на сайте, но вы можете его заказать. Ниже расскажем как.
-                </p>
-            </div>
-        </div>
+    <main class="regions-content">
+        <h2 class="regions-content__heading regions__heading">Вина солнечной Кубани</h2>
 
-        <div class="hto-content__instruction instruction">
-            <h2 class="hto-content__instruction__title instruction__title">Всё просто:</h2>
-            <ol class="hto-content__instruction__list instruction__list">
-                
-                <li class="hto-content__instruction__list__item list__item">
-                    <a class="list__item__link" href="#">Выберите вино</a> (или даже несколько), добавьте в корзину.
-                </li>
-                
-                <li class="hto-content__instruction__list__item list__item">
-                    Перейдите в <a class="list__item__link" href="#">корзину</a>, оформите заказ.
-                </li>
-                
-                <li class="hto-content__instruction__list__item list__item">
-                    Ответьте на звонок нашего дружелюбного менеджера.
-                </li>
-                
-                <li class="hto-content__instruction__list__item list__item">
-                    Заберите заказ на почте или дождитесь курьера.
-                </li>
-                
-                <li class="hto-content__instruction__list__item list__item">
-                    Подпишитесь на <a class="list__item__link" href="#">наш Instagram</a> 😉 и приходите к нам ещё!
-                </li>
-                
-            </ol>
-        </div>
-
-
-        <figure class="hto-content__delivery delivery">
-            <p class="delivery__img__shell"><img class="delivery__img" src="img/kraft-vine.png" alt="Вино в крафтовой упаковке"></p>
-            <figcaption class="delivery__desc">Доставим вино в нашей крафтовой упаковке.</figcaption>
-        </figure>
-
-        <div class="hto-content__delivery__textBlock delivery__textBlock">
-            <h2 class="delivery__textBlock__title">Доставка:</h2>
-            <p class="delivery__textBlock__text">
-                Почтой России или любой транспортной компанией (СДЭК, Деловые линии, DHL и др.) по всей России. По Москве доставим бесплатно, а в другие регионы стоимость доставки учтонит менеджер, когда позвонит для подтверждения заказа.
+        <div class="regions-content__desc regions__desc">
+            <p class="regions__desc__pretitle--text">
+                Таманский полуостров – удивительное место. Самый солнечный регион страны, расположенный между двух морей – Азовским и Черным, находится на той же широте, что и <span class="regions__desc__top--span">Бордо во Франции.</span>
+            </p>
+            <p class="regions__desc__title">Терруар</p>
+            <p class="regions__desc__subtitle--text">
+                Хорошо дренируемые глинистые, гравийно-известняковые почвы с большим содержанием мела и сланцевой подпочвой имеют потенциал настоящего “Grand Cru Bordeaux”. Близость моря и гор сформировали уникальный минеральный состав этих почв, что естественным образом сказывается на качестве вин региона и делает их узнаваемыми и неординарными по своей палитре ароматов и вкусовых ощущений. В совокупности этот набор почвенно-климатических характеристик создает великолепные условия для виноделия в регионе.
             </p>
         </div>
 
-        <div class="hto-content__delivery-info delivery-info">
-            <div class="delivery-info__img">
-                <img src="img/delivery-icon.png" alt="Иконка 'доставка'">
-            </div>
-            <div class="delivery-info__text">
-                <p>
-                    Упакуем аккуратно и надёжно, так что ничего не разобъётся. Даже если через Почту России. Проверено.
-                </p>
-            </div>
-        </div>
+        <section class="regions-content__manufacturers manufacturers">
+            <h2 class="manufacturers__title">Производители</h2>
 
-        <section class="main-content__recommend-products products">
+            <ul class="manufacturers__list">
+
+                <li class="manufacturers__item">
+                    <figure class="manufacturers__item__content">
+                        <div class="manufacturers__item__image-wrapper">
+                            <img class="manufacturers__item__image" src="img/petrovski-estate.png" alt="Усадьба Петровских">
+                        </div>
+                        <figcaption class="manufacturers__item__desc">
+                            <span class="manufacturers__item__desc--text">Усадьба Петровских</span>
+                        </figcaption>
+                    </figure>
+                    <button class="manufacturers__btn">
+                        <p class="manufacturers__btn--text">
+                            Показать описание
+                        </p>
+                    </button>
+                </li>
+
+                <li class="manufacturers__item">
+                    <figure class="manufacturers__item__content">
+                        <div class="manufacturers__item__image-wrapper">
+                            <img class="manufacturers__item__image" src="img/kuban-vine.png" alt="Кубань-Вино">
+                        </div>
+                        <figcaption class="manufacturers__item__desc">
+                            <span class="manufacturers__item__desc--text">Кубань-Вино</span>
+                        </figcaption>
+                    </figure>
+                    <button class="manufacturers__btn">
+                        <p class="manufacturers__btn--text">
+                            Показать описание
+                        </p>
+                    </button>
+                </li>
+
+                <li class="manufacturers__item">
+                    <figure class="manufacturers__item__content">
+                        <div class="manufacturers__item__image-wrapper">
+                            <img class="manufacturers__item__image" src="img/valley.png" alt="Долина">
+                        </div>
+                        <figcaption class="manufacturers__item__desc">
+                            <span class="manufacturers__item__desc--text">Долина</span>
+                        </figcaption>
+                    </figure>
+                    <button class="manufacturers__btn">
+                        <p class="manufacturers__btn--text">
+                            Показать описание
+                        </p>
+                    </button>
+                </li>
+
+                <li class="manufacturers__item">
+                    <figure class="manufacturers__item__content">
+                        <div class="manufacturers__item__image-wrapper">
+                            <img class="manufacturers__item__image" src="img/villa-viktoria.png" alt="Вилла Виктория">
+                        </div>
+                        <figcaption class="manufacturers__item__desc">
+                            <span class="manufacturers__item__desc--text">Вилла Виктория</span>
+                        </figcaption>
+                    </figure>
+                    <button class="manufacturers__btn">
+                        <p class="manufacturers__btn--text">
+                            Показать описание
+                        </p>
+                    </button>
+                </li>
+
+                <li class="manufacturers__item">
+                    <figure class="manufacturers__item__content">
+                        <div class="manufacturers__item__image-wrapper">
+                            <img class="manufacturers__item__image" src="img/inkerman.png" alt="Инкерман">
+                        </div>
+                        <figcaption class="manufacturers__item__desc">
+                            <span class="manufacturers__item__desc--text">Инкерман</span>
+                        </figcaption>
+                    </figure>
+                    <button class="manufacturers__btn">
+                        <p class="manufacturers__btn--text">
+                            Показать описание
+                        </p>
+                    </button>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="regions-content__recommend-products products">
             <h2 class="products__heading">Первое, что хочется предложить</h2>
             <ul class="products__layout">
             <li class="products__item item-card">
@@ -177,22 +214,20 @@
             </ul>
             <a class="products__more-link" href="#">Смотреть все вина</a>
         </section>
-        
-        <section class="hto-content__inst inst">
+
+        <section class="regions-content__inst inst">
             <div class="inst__inner">
-                <h2 class="inst__heading">Следите за новинками</h2>
-                <p class="inst__text">
+            <h2 class="inst__heading">Следите за новинками</h2>
+            <p class="inst__text">
                 Новые фото и интересные истории о винах в нашем Instagram
-                </p>
-                <a class="inst__link" href="#" target="_blank">Наш Instagram</a>
+            </p>
+            <a class="inst__link" href="#" target="_blank">Наш Instagram</a>
             </div>
         </section>
 
     </main>
-
     @@include('_footer.html')
 
     <script src="js/index.min.js"></script>
-
 </body>
 </html>
