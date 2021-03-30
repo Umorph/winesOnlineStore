@@ -1,0 +1,17 @@
+.aside {
+  margin: 0;
+  padding: 0;
+}
+
+.aside__filer {
+  margin: 0;
+  padding: 0;
+}
+
+.aside__help-find {
+  margin: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 24px;
+  }
+}
