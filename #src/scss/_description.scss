@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .description__inner {
@@ -25,10 +25,12 @@
 
   @media screen and (min-width: 720px) {
     padding: 48px;
+    max-width: 1002px;
   }
 
   @media screen and (min-width: 1200px) {
     padding: 64px;
+    max-width: 1176px;
   }
 }
 
