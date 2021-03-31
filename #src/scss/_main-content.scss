@@ -152,3 +152,22 @@
   }
 }
 
+.main-content__contacts-description {
+  margin: 48px auto 0;
+  padding: 0 16px;
+  max-width: 936px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
+}
+
+.main-content__contacts {
+  margin: 48px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
+}
+

@@ -37,4 +37,8 @@
   font-size: 18px;
   line-height: 32px;
   color: rgba($trueBlack, 0.88);
+
+  &--centered {
+    text-align: center;
+  }
 }
