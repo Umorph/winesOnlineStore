@@ -73,8 +73,14 @@
 
 //Стили для блока с контактами
 .contacts-content__links {
-    display: grid;
     margin: 0 auto;
+}
+
+.links-items {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     justify-content: center;
     grid-row-gap: 48px;
 
@@ -91,10 +97,9 @@
     }
 }
 
-.links-items {
+.links-item {
     text-align: center;
     align-items: center;
-    list-style-type: none;
     margin: 0;
     padding: 0;
 
@@ -107,11 +112,6 @@
     @media screen and (min-width: 1600px) {
         width: 336px;
     }
-}
-
-.links-item {
-    text-align: center;
-    align-items: center;
 }
 
 .links-item__img--shell {
