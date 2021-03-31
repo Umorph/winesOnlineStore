@@ -15,7 +15,7 @@
 // Стили для заголовка
 .contacts__heading {
     padding: 0;
-    margin: 40px 16px 48px 16px;
+    margin: 120px auto 48px;
 
     font-family: $amatic;
     font-weight: 700;
@@ -27,17 +27,17 @@
     
 
     @media screen and (min-width: 410px) {
-        margin: 40px auto 48px;
+        margin: 120px auto 48px;
     }
     @media screen and (min-width: 720px) {
         font-weight: 700;
         font-size: 112px;
         line-height: 120px;
         letter-spacing: -2px;
-        margin: 40px auto 48px;
+        margin: 120px auto 48px;
     }
     @media screen and (min-width: 810px) {
-        margin: 40px auto 48px;
+        margin: 120px auto 48px;
     }
 }
 
