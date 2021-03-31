@@ -30,11 +30,19 @@
 .main-content__regions-block {
   margin: 120px auto 0;
   padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
 }
 
 .main-content__inst {
   margin: 120px auto 0;
   padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
 }
 
 .main-content__catalog {
@@ -99,6 +107,48 @@
 
   @media screen and (min-width: 1200px) {
     margin: 40px auto 0;
+  }
+}
+
+.main-content__heading {
+  box-sizing: border-box;
+  margin: 48px auto 0;
+  padding: 0 16px;
+  max-width: 1416px;
+
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: rgba($trueBlack, 0.88);
+
+  @media screen and (min-width: 720px) {
+    margin: 64px auto;
+    padding: 0 48px;
+
+    font-size: 112px;
+    line-height: 120px;
+    letter-spacing: -2px;
+  }
+}
+
+.main-content__region-description {
+  margin: 48px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
+}
+
+.main-content__manufacturers-layout {
+  margin: 120px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
   }
 }
 
