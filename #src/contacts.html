@@ -1,0 +1,264 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Своё вино | Регионы / Кубань</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="header__inner">
+      <a class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+      </a>
+      <div class="header__site-nav-wrapper">
+        <ul class="header__site-nav site-nav">
+          <li class="site-nav__item site-nav__item--dropdown-wrapper">
+            <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+            <table class="site-nav__menu-dropdown menu-dropdown">
+              <thead class="menu-dropdown__table-head">
+              <tr class="menu-dropdown__row">
+                <th class="menu-dropdown__heading">По регионам</th>
+                <th class="menu-dropdown__heading">Цвет</th>
+                <th class="menu-dropdown__heading">Сахар</th>
+              </tr>
+              </thead>
+              <tbody class="menu-dropdown__table-body">
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Крым
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Красное
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кубань
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Оранжевое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кавказ
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Розовое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусухое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item"></td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Белое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сухое
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="HowToOrder.html">Как заказать</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="Contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="header__user-nav user-nav">
+        <li class="user-nav__item">
+          <a class="user-nav__cart-link" href="#">
+            <span class="user-nav__cart-counter">3</span>
+            <span class="visually-hidden">Корзина товаров</span>
+          </a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__favorite-link" href="#">
+            <span class="user-nav__favorite-counter">5</span>
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li class="user-nav__item user-nav__item--burger-wrapper">
+          <button class="user-nav__burger-button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="user-nav__offcanvas offcanvas">
+            <div class="offcanvas__window">
+              <ul class="offcanvas__list">
+                <li class="offcanvas__item">
+                  <button class="offcanvas__toggle-button" type="button" onclick="toggleOffcanvasDropdown()">
+                    Подобрать вино
+                  </button>
+                  <div class="offcanvas__toggle-inner">
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--region-icon">По регионам</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Крым</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Кубань</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Кавказ</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--color-icon">Цвет</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Красное</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Оранжевое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Розовое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Белое</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--sugar-icon">Сахар</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Сладкое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Полусладкое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Полусухое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Сухое</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="offcanvas__item">
+                  <a class="offcanvas__link" href="HowToOrder.html">Как заказать</a>
+                </li>
+                <li class="offcanvas__item">
+                  <a class="offcanvas__link" href="Contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="main-content__breadcrumbs breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="main-content__heading">Контакты</h1>
+    <div class="main-content__contacts-description description">
+      <div class="description__inner">
+        <section class="description__benefits benefits">
+          <p class="benefits__text benefits__text--centered">
+            Мы можем подобрать вино к столу или в подарок, предложить вино на праздник по вашим требованиям.
+          </p>
+        </section>
+      </div>
+    </div>
+    <ul class="main-content__contacts contacts">
+      <li class="contacts__item">
+        <a class="contacts__link" href="#" target="_blank">
+          <div class="contacts__image">
+            <img src="img/contacts-telegram.svg" alt="Телеграм">
+          </div>
+          <p class="contacts__name">Telegram</p>
+          <strong class="contacts__value">@svoe-vino</strong>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link" href="#" target="_blank">
+          <div class="contacts__image">
+            <img src="img/contacts-phone.svg" alt="Телефон">
+          </div>
+          <p class="contacts__name">Телефон</p>
+          <strong class="contacts__value">+7-(495)-999-88-77</strong>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link" href="#" target="_blank">
+          <div class="contacts__image">
+            <img src="img/contacts-mail.svg" alt="Email">
+          </div>
+          <p class="contacts__name">E-mail</p>
+          <strong class="contacts__value">mail@svoe-vino.ru</strong>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link" href="#" target="_blank">
+          <div class="contacts__image">
+            <img src="img/contacts-inst.svg" alt="Инстаграм">
+          </div>
+          <p class="contacts__name">Instagram</p>
+          <strong class="contacts__value">@svoe-vino</strong>
+        </a>
+      </li>
+    </ul>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        Данный сайт не является интернет-магазином. Мы работаем в строгом соответствии с законами РФ: не продаём и не
+        доставляем алкоголь в ночное время; не продаём и не доставляем алкоголь несовершеннолетним; не осуществляем
+        дистанционную продажу или продажу алкоголя иными способами, запрещёнными законами РФ.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
