@@ -64,3 +64,12 @@
   margin: 120px auto 0;
   padding: 0 16px;
 }
+
+.main-content__manufacturer-info {
+  margin: 64px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
+}
