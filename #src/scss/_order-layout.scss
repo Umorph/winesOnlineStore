@@ -1,0 +1,54 @@
+.order-layout {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 796px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 936px;
+  }
+}
+
+.order-layout__heading {
+  margin: 0;
+  padding: 0;
+
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: rgba($trueBlack, 0.88);
+
+  @media screen and (min-width: 720px) {
+    font-size: 112px;
+    line-height: 120px;
+    letter-spacing: -2px;
+    text-align: center;
+  }
+}
+
+.order-layout__tip {
+  margin: 48px 0 0;
+}
+
+.order-layout__order-steps {
+  margin: 120px 0 0;
+  padding: 0;
+}
+
+.order-layout__package-preview {
+  margin: 120px 0 0;
+  padding: 0;
+}
+
+.order-layout__delivery {
+  margin: 120px 0 0;
+  padding: 0;
+}

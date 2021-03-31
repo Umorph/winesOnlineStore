@@ -73,3 +73,32 @@
     padding: 0 48px;
   }
 }
+
+.main-content__breadcrumbs {
+  margin: 80px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    margin: 104px auto 0;
+    padding: 0 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 144px auto 0;
+  }
+}
+
+.main-content__order-layout {
+  margin: 48px auto 0;
+  padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    margin: 64px auto 0;
+    padding: 0 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 40px auto 0;
+  }
+}
+
