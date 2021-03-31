@@ -1,0 +1,36 @@
+.package-preview {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.package-preview__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+}
+
+.package-preview__text-wrapper {
+  margin: 16px 0 0;
+  padding: 0;
+  align-self: center;
+}
+
+.package-preview__text {
+  margin: 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: rgba($trueBlack, 0.6);
+}
