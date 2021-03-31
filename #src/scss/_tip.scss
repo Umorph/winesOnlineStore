@@ -1,0 +1,45 @@
+.tip {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+
+  background: #E0F7FA;
+  border-radius: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    background: url("../img/info-icon.svg") center no-repeat;
+  }
+
+  &--package-icon {
+    background: #FFF8E1;
+
+    &::before {
+      background: url("../img/delivery-icon.svg") center no-repeat;
+    }
+  }
+}
+
+.tip__text {
+  margin: 0;
+  padding: 0 0 0 72px;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.88);
+}
