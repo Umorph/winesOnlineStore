@@ -1,6 +1,5 @@
-﻿
-.hto-content {
-    margin: 0;
+﻿.hto-content {
+    margin: 120px 0 0 0;
     padding: 0;
     min-width: 320px;
     display: flex;
@@ -86,6 +85,7 @@
     }
     @media screen and (min-width: 969px) {
         margin: 0 auto;
+        width: 936px;
     }
 }
 
@@ -136,20 +136,30 @@
 }
 
 // Стили для Блока с картинкой "Доставим вино в нашей крафтовой упаковке."
+
 .delivery {
     margin: 0 16px;
+    padding: 0;
     text-align: center;
+    width: 100%;
     color: rgba($color: $trueBlack, $alpha: 0.6);
+
     @media screen and (min-width: 720px) {
-        margin: 0 48px;
-    }
-    @media screen and (min-width: 800px) {
         margin: 0 auto;
+        max-width: 796px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 936px;
     }
 }
 
+.delivery__img__shell {
+    width: 100%;
+    max-width: 936px;
+}
+
 .delivery__img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .delivery__desc {

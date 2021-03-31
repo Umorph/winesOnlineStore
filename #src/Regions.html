@@ -39,12 +39,42 @@
                             <span class="manufacturers__item__desc--text">Усадьба Петровских</span>
                         </figcaption>
                     </figure>
-                    <button class="manufacturers__btn">
+                    <button class="manufacturers__btn btnPopup"> <!-- Кнопка, "открывающая" попап -->
                         <p class="manufacturers__btn--text">
                             Показать описание
                         </p>
                     </button>
                 </li>
+
+
+<!--////////////////////Modal window////////////////////-->
+
+    <div class="popup-wrapper"  id="popup">
+        <div class="manufacturers__item__desc--popup popup">
+
+            <div class="popup-top">
+                <span class="popup-top__text">Производитель</span>
+                <span class="close-popup"><img src="img/close-icon.svg" alt="Кнопка закрытия модального окна"></span>
+            </div>
+        
+            <div class="popup-content">
+                <h2 class="popup-content__title">
+                    Усадьба Перовских
+                </h2>
+                <p class="popup-content__subtitle">
+                    Винодельческое хозяйство «Усадьба Перовских» было основано в 1834 году Николаем Перовским, внебрачным сыном графа Разумовского.
+                    Его отец Алексей Кириллович Разумовский был невероятно образованной личностью – тайный советник, сенатор, министр народного просвещения, отец пятерых детей в официальном браке, а также родоначальник внебрачной ветви Перовских. 
+                    <br>
+                    <br>
+                    Фамилия Перовских дала России таких замечательных деятелей как Николай Перовский (губернатор Таврической губернии и градоначальник Феодосии), Алексей Перовский, также известный под псевдонимом Антоний Погорельский (русский писатель, член Российской академии наук), Алексей Перовский – был родным дядей А. К. Толстого и братьев Алексея и Владимира Жемчужниковых, а его племянники прославились на всю Империю, создав литературную маску «Козьма Прутков», а также Лев Перовский – министр внутренних дел Российской Империи, а также Управляющий Кабинетом Eго Императорского Величества.
+                </p>
+            </div>
+        
+        </div>
+    </div>
+
+<!--////////////////////Modal window////////////////////-->
+
 
                 <li class="manufacturers__item">
                     <figure class="manufacturers__item__content">
@@ -55,7 +85,7 @@
                             <span class="manufacturers__item__desc--text">Кубань-Вино</span>
                         </figcaption>
                     </figure>
-                    <button class="manufacturers__btn">
+                    <button class="manufacturers__btn btnPopup">
                         <p class="manufacturers__btn--text">
                             Показать описание
                         </p>
@@ -71,7 +101,7 @@
                             <span class="manufacturers__item__desc--text">Долина</span>
                         </figcaption>
                     </figure>
-                    <button class="manufacturers__btn">
+                    <button class="manufacturers__btn btnPopup">
                         <p class="manufacturers__btn--text">
                             Показать описание
                         </p>
@@ -87,7 +117,7 @@
                             <span class="manufacturers__item__desc--text">Вилла Виктория</span>
                         </figcaption>
                     </figure>
-                    <button class="manufacturers__btn">
+                    <button class="manufacturers__btn btnPopup">
                         <p class="manufacturers__btn--text">
                             Показать описание
                         </p>
@@ -103,7 +133,7 @@
                             <span class="manufacturers__item__desc--text">Инкерман</span>
                         </figcaption>
                     </figure>
-                    <button class="manufacturers__btn">
+                    <button class="manufacturers__btn btnPopup">
                         <p class="manufacturers__btn--text">
                             Показать описание
                         </p>
@@ -228,6 +258,7 @@
     </main>
     @@include('_footer.html')
 
+    <script src="js/_popup.js"></script>
     <script src="js/index.min.js"></script>
 </body>
 </html>
