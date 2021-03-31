@@ -1,0 +1,43 @@
+.description {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.description__inner {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: #F5F5F5;
+  border-radius: 12px;
+
+  @media screen and (min-width: 720px) {
+    padding: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 64px;
+  }
+}
+
+.description__benefits {
+  margin: 0;
+  padding: 0;
+}
+
+.description__terroir {
+  margin: 48px 0 0;
+  padding: 0;
+}
