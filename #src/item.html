@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Своё вино | Крымское лето</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="header">
+  <nav class="header__inner">
+    <a class="header__logo">
+      <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+    </a>
+    <div class="header__site-nav-wrapper">
+      <ul class="header__site-nav site-nav">
+        <li class="site-nav__item site-nav__item--dropdown-wrapper">
+          <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+          <table class="site-nav__menu-dropdown menu-dropdown">
+            <thead class="menu-dropdown__table-head">
+            <tr class="menu-dropdown__row">
+              <th class="menu-dropdown__heading">По регионам</th>
+              <th class="menu-dropdown__heading">Цвет</th>
+              <th class="menu-dropdown__heading">Сахар</th>
+            </tr>
+            </thead>
+            <tbody class="menu-dropdown__table-body">
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Крым
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Красное
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Сладкое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Кубань
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Оранжевое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Полусладкое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Кавказ
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Розовое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Полусухое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item"></td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Белое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Сухое
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="HowToOrder.html">Как заказать</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="Contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="header__user-nav user-nav">
+      <li class="user-nav__item">
+        <a class="user-nav__cart-link" href="#">
+          <span class="user-nav__cart-counter">3</span>
+          <span class="visually-hidden">Корзина товаров</span>
+        </a>
+      </li>
+      <li class="user-nav__item">
+        <a class="user-nav__favorite-link" href="#">
+          <span class="user-nav__favorite-counter">5</span>
+          <span class="visually-hidden">Избранное</span>
+        </a>
+      </li>
+      <li class="user-nav__item user-nav__item--burger-wrapper">
+        <button class="user-nav__burger-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="user-nav__offcanvas offcanvas">
+          <div class="offcanvas__window">
+            <ul class="offcanvas__list">
+              <li class="offcanvas__item">
+                <button class="offcanvas__toggle-button" type="button" onclick="toggleOffcanvasDropdown()">
+                  Подобрать вино
+                </button>
+                <div class="offcanvas__toggle-inner">
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--region-icon">По регионам</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Крым</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Кубань</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Кавказ</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--color-icon">Цвет</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Красное</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Оранжевое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Розовое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Белое</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--sugar-icon">Сахар</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Сладкое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Полусладкое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Полусухое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Сухое</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="offcanvas__item">
+                <a class="offcanvas__link" href="HowToOrder.html">Как заказать</a>
+              </li>
+              <li class="offcanvas__item">
+                <a class="offcanvas__link" href="Contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+  <section class="main-content__wine-desc wine-desc">
+    <div class="wine-desc__inner">
+      <div class="wine-desc__breadcrumbs breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Крым</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Красное</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Полусладкое</a>
+          </li>
+        </ul>
+      </div>
+      <div class="wine-desc__layout">
+        <div class="wine-desc__heading-wrapper">
+          <h1 class="wine-desc__heading">Крымское лето</h1>
+          <div class="wine-desc__info">
+            <p class="wine-desc__price">750 ₽</p>
+            <p class="wine-desc__volume">0,75L</p>
+          </div>
+          <div class="wine-desc__buttons-wrapper">
+            <button class="wine-desc__cart-button" type="button">В корзину</button>
+            <button class="wine-desc__favorite-button" type="button">В избранное</button>
+          </div>
+        </div>
+        <div class="wine-desc__image-wrapper">
+          <picture>
+            <source srcset="img/wine-preview-big.png" media="(min-width: 720px)">
+            <source srcset="img/wine-preview-small.webp" type="image/webp">
+            <img class="wine-desc__image" src="img/wine-preview-small.png" alt="Вино «Крымское лето»">
+          </picture>
+        </div>
+        <div class="wine-desc__params-wrapper">
+          <ul class="wine-desc__params-list">
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Цвет</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">Красное</p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Содержание сахара</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">Полусладкое</p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Регион</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">Кубань</p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Сортовой состав</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">
+                Каберне Совиньон,
+                Каберне Фран,
+                Красные Сорта Винограда
+              </p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Винтаж (год урожая)</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">2019</p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Производитель</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">Усадьба Перовских</p>
+            </li>
+            <li class="wine-desc__params-item">
+              <div class="wine-desc__param-name-wrapper">
+                <p class="wine-desc__param-name">Крепость</p>
+                <div class="wine-desc__dash-line"></div>
+              </div>
+              <p class="wine-desc__param-value">12%</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="main-content__description description">
+    <div class="description__inner">
+      <section class="description__benefits benefits">
+        <h2 class="benefits__heading">За что любим</h2>
+        <p class="benefits__text">
+          Глубокий тёмный гранатовый цвет. Богатый аромат спелых чёрных ягод, кожи и грецких
+          орехов. Сбалансированное, полнотелое, с мягкими и округлыми танинами. Во вкусе вишня, чёрная смородина, перец.
+          Продолжительное насыщенное послевкусие.
+        </p>
+      </section>
+      <section class="description__terroir benefits">
+        <h2 class="benefits__heading">Терруар</h2>
+        <p class="benefits__text">
+          Виноградники хозяйства расположены в уникальной климатической зоне на побережье Азовского моря.
+        </p>
+      </section>
+    </div>
+  </div>
+</main>
+@@include('_footer.html')
+</body>
+</html>

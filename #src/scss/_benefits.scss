@@ -1,0 +1,40 @@
+.benefits {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.benefits__heading {
+  margin: 0;
+  padding: 0;
+
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 48px;
+  color: rgba($trueBlack, 0.88);
+
+  @media screen and (min-width: 720px) {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -1px;
+  }
+}
+
+.benefits__text {
+  margin: 24px 0 0;
+  padding: 0;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgba($trueBlack, 0.88);
+}
