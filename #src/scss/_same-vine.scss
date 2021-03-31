@@ -1,0 +1,103 @@
+.same-vine {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 1416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.same-vine__heading {
+  margin: 0;
+  padding: 0;
+
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: rgba($trueBlack, 0.88);
+}
+
+.same-vine__slider {
+  box-sizing: border-box;
+  margin: 48px 0 0;
+  padding: 0 0 56px;
+  width: 100%;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 32px 56px;
+  }
+}
+
+.same-vine__wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.same-vine__slide {
+  margin: 0;
+  padding: 0;
+}
+
+// Swiper style config
+
+.same-vine .swiper-pagination {
+  bottom: 19px;
+}
+
+.same-vine .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  opacity: 1;
+
+  @include smooth;
+}
+
+.same-vine .swiper-pagination-bullet-active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.same-vine .swiper-button-next,
+.same-vine .swiper-button-prev {
+  top: 360px;
+
+  box-sizing: border-box;
+  width: 56px;
+  height: 56px;
+  display: none;
+
+  background: url("../img/arrow-narrow-right.svg") center no-repeat;
+  border: 2px solid $yellowMain;
+  border-radius: 12px;
+
+  transform: translateY(-56px);
+
+  &::after {
+    font-size: 0;
+  }
+
+  @media screen and (min-width: 720px) {
+    display: block;
+  }
+}
+
+.same-vine .swiper-button-next {
+  right: 20px;
+}
+
+.same-vine .swiper-button-prev {
+  left: 20px;
+
+  transform: translateY(-56px) rotate(180deg);
+}

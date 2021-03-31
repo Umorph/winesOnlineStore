@@ -54,4 +54,13 @@
 .main-content__description {
   margin: 120px auto 0;
   padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
+}
+
+.main-content__same-vine {
+  margin: 120px auto 0;
+  padding: 0 16px;
 }
