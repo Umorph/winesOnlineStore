@@ -31,9 +31,11 @@
 @import "benefits";
 @import "description";
 
-@import "description";
-
-@import "_HowToOrder.scss";
+@import "delivery";
+@import "package-preview";
+@import "order-steps";
+@import "tip";
+@import "order-layout";
 
 @import "_Regions.scss";
 @import "_popup.scss";
