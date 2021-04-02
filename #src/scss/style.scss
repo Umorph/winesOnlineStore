@@ -1,12 +1,14 @@
+// Main style files
 @import "mixins.scss";
 @import "variables.scss";
-@import"scaffolding.scss";
+@import "scaffolding.scss";
 @import "fonts.scss";
 
+// age confirm && eula
 @import "AgeConfirm";
 @import "eula";
-@import "Err404";
 
+// header
 @import "wine-type";
 @import "offcanvas";
 @import "user-nav";
@@ -19,6 +21,7 @@
 @import "regions-block";
 @import "inst";
 
+// catalog
 @import "breadcrumbs";
 @import "filter";
 @import "help-find";
@@ -28,6 +31,7 @@
 @import "catalog-layout";
 @import "catalog";
 
+// item
 @import "manufacturer-info";
 @import "wine-desc";
 @import "swiper-bundle";
@@ -35,18 +39,26 @@
 @import "benefits";
 @import "description";
 
+// how to order
 @import "delivery";
 @import "package-preview";
 @import "order-steps";
 @import "tip";
 @import "order-layout";
 
+// regions
 @import "manufacturers-layout";
 
+// contacs
 @import "contacts";
 
+// document 404
+@import "err-document";
+
+// main container
 @import "main-content";
 
+// footer
 @import "footer";
 
 
