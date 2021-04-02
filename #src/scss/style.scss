@@ -4,9 +4,8 @@
 @import "scaffolding.scss";
 @import "fonts.scss";
 
-// age confirm && eula
+// age confirm
 @import "AgeConfirm";
-@import "eula";
 
 // header
 @import "wine-type";
@@ -54,6 +53,9 @@
 
 // document 404
 @import "err-document";
+
+// policy
+@import "policy";
 
 // main container
 @import "main-content";
