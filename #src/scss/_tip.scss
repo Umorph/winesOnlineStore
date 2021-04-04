@@ -29,6 +29,12 @@
       background: url("../img/delivery-icon.svg") center no-repeat;
     }
   }
+
+  &--no-icon {
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .tip__text {
@@ -42,4 +48,8 @@
   line-height: 24px;
   letter-spacing: 0.75px;
   color: rgba($trueBlack, 0.88);
+
+  &--no-icon {
+    padding: 0;
+  }
 }
