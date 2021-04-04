@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Своё вино | Корзина</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="header">
+  <nav class="header__inner">
+    <a class="header__logo">
+      <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+    </a>
+    <div class="header__site-nav-wrapper">
+      <ul class="header__site-nav site-nav">
+        <li class="site-nav__item site-nav__item--dropdown-wrapper">
+          <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+          <table class="site-nav__menu-dropdown menu-dropdown">
+            <thead class="menu-dropdown__table-head">
+            <tr class="menu-dropdown__row">
+              <th class="menu-dropdown__heading">По регионам</th>
+              <th class="menu-dropdown__heading">Цвет</th>
+              <th class="menu-dropdown__heading">Сахар</th>
+            </tr>
+            </thead>
+            <tbody class="menu-dropdown__table-body">
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Крым
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Красное
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Сладкое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Кубань
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Оранжевое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Полусладкое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Кавказ
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Розовое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Полусухое
+                </a>
+              </td>
+            </tr>
+            <tr class="menu-dropdown__row">
+              <td class="menu-dropdown__item"></td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Белое
+                </a>
+              </td>
+              <td class="menu-dropdown__item">
+                <a class="menu-dropdown__link" href="#">
+                  Сухое
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="HowToOrder.html">Как заказать</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="Contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="header__user-nav user-nav">
+      <li class="user-nav__item">
+        <a class="user-nav__cart-link" href="#">
+          <span class="user-nav__cart-counter">3</span>
+          <span class="visually-hidden">Корзина товаров</span>
+        </a>
+      </li>
+      <li class="user-nav__item">
+        <a class="user-nav__favorite-link" href="#">
+          <span class="user-nav__favorite-counter">5</span>
+          <span class="visually-hidden">Избранное</span>
+        </a>
+      </li>
+      <li class="user-nav__item user-nav__item--burger-wrapper">
+        <button class="user-nav__burger-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="user-nav__offcanvas offcanvas">
+          <div class="offcanvas__window">
+            <ul class="offcanvas__list">
+              <li class="offcanvas__item">
+                <button class="offcanvas__toggle-button" type="button" onclick="toggleOffcanvasDropdown()">
+                  Подобрать вино
+                </button>
+                <div class="offcanvas__toggle-inner">
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--region-icon">По регионам</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Крым</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Кубань</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Кавказ</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--color-icon">Цвет</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Красное</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Оранжевое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Розовое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Белое</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="offcanvas__wine-type wine-type">
+                    <h3 class="wine-type__heading wine-type__heading--sugar-icon">Сахар</h3>
+                    <ul class="wine-type__list">
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Сладкое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Полусладкое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Полусухое</a>
+                      </li>
+                      <li class="wine-type__item">
+                        <a class="wine-type__link" href="#">Сухое</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="offcanvas__item">
+                <a class="offcanvas__link" href="HowToOrder.html">Как заказать</a>
+              </li>
+              <li class="offcanvas__item">
+                <a class="offcanvas__link" href="Contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+  <div class="main-content__breadcrumbs breadcrumbs">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="#">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Корзина</a>
+      </li>
+    </ul>
+  </div>
+  <section class="main-content__cart cart">
+    <h1 class="cart__heading">Корзина</h1>
+    <ul class="cart__list">
+      <li class="cart__item cart-item">
+        <figure class="cart-item__inner">
+          <div class="cart-item__image-wrapper">
+            <img class="cart-item__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
+          </div>
+          <figcaption class="cart-item__wine-desc">
+            <b class="cart-item__name">Солярис</b>
+            <p class="cart-item__short-desc">Белое, полусладкое</p>
+            <div class="cart-item__price-wrapper">
+              <p class="cart-item__price">1350 ₽</p>
+              <p class="cart-item__volume">0.65L</p>
+            </div>
+          </figcaption>
+          <div class="cart-item__cart-controls">
+            <div class="cart-item__count-wrapper">
+              <button class="cart-item__count-button cart-item__count-button--decrease">-</button>
+              <span class="cart-item__count">1</span>
+              <button class="cart-item__count-button cart-item__count-button--increase">+</button>
+            </div>
+            <button class="cart-item__del-button" type="button">Убрать</button>
+          </div>
+        </figure>
+      </li>
+      <li class="cart__item cart-item">
+        <figure class="cart-item__inner">
+          <div class="cart-item__image-wrapper">
+            <img class="cart-item__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
+          </div>
+          <figcaption class="cart-item__wine-desc">
+            <b class="cart-item__name">Солярис</b>
+            <p class="cart-item__short-desc">Белое, полусладкое</p>
+            <div class="cart-item__price-wrapper">
+              <p class="cart-item__price">1350 ₽</p>
+              <p class="cart-item__volume">0.65L</p>
+            </div>
+          </figcaption>
+          <div class="cart-item__cart-controls">
+            <div class="cart-item__count-wrapper">
+              <button class="cart-item__count-button cart-item__count-button--decrease">-</button>
+              <span class="cart-item__count">1</span>
+              <button class="cart-item__count-button cart-item__count-button--increase">+</button>
+            </div>
+            <button class="cart-item__del-button" type="button">Убрать</button>
+          </div>
+        </figure>
+      </li>
+    </ul>
+    <div class="cart__tip tip tip--no-icon">
+      <p class="tip__text tip__text--no-icon">
+        У нас тут не интернет-магазин, как бы не казалось. Согласно законам РФ, мы не можем продавать алкоголь
+        прямо на сайте, но вы можете его заказать.
+      </p>
+    </div>
+    <form class="cart__form cart-form" action="#">
+      <strong class="cart-form__cost">
+        Всего:
+        <span class="cart-form__cost-price">5550</span> ₽
+      </strong>
+      <ul class="cart-form__list">
+        <li class="cart-form__item">
+          <label class="cart-form__label" for="name">Ваше имя</label>
+          <input class="cart-form__input" id="name" type="text" name="user-name" required>
+        </li>
+        <li class="cart-form__item">
+          <label class="cart-form__label" for="phone">Телефон</label>
+          <input class="cart-form__input" id="phone" type="tel" name="user-phone" required>
+        </li>
+        <li class="cart-form__item">
+          <label class="cart-form__label" for="email">Email</label>
+          <input class="cart-form__input" id="email" type="email" name="user-email" required>
+        </li>
+        <li class="cart-form__item">
+          <label class="cart-form__label" for="address">Адрес</label>
+          <input class="cart-form__input" id="address" type="text" name="user-address" required>
+        </li>
+        <li class="cart-form__item">
+          <label class="cart-form__label" for="comment">Комментарий</label>
+          <textarea class="cart-form__textarea" name="user-comment" id="comment"></textarea>
+        </li>
+      </ul>
+      <button class="cart-form__submit-button" type="submit">Отправить заявку</button>
+    </form>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__text">
+      Данный сайт не является интернет-магазином. Мы работаем в строгом соответствии с законами РФ: не продаём и не
+      доставляем алкоголь в ночное время; не продаём и не доставляем алкоголь несовершеннолетним; не осуществляем
+      дистанционную продажу или продажу алкоголя иными способами, запрещёнными законами РФ.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
