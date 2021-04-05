@@ -18,7 +18,7 @@
   background: rgba($trueBlack, 0.6);
 
   transform: translateY(100%);
-  z-index: 5;
+  z-index: 20;
 
   @include smooth;
 
@@ -146,7 +146,7 @@
 .filter__track {
   box-sizing: border-box;
   margin: 0;
-  padding: 0 16px;
+  padding: 24px 16px 0;
   display: grid;
   grid-gap: 24px;
 
@@ -156,6 +156,7 @@
 
   @media screen and (min-width: 1200px) {
     padding: 0;
+    grid-gap: 48px;
 
     overflow-y: auto;
   }
@@ -191,6 +192,10 @@
   @media screen and (min-width: 1200px) {
     &--no-desktop {
       display: none;
+    }
+
+    &:not(:nth-child(2)) {
+      content: none;
     }
   }
 }
