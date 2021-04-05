@@ -1,0 +1,104 @@
+.authors {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1416px;
+  min-height: 400px;
+  display: grid;
+}
+
+.authors__inner {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 132px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: #FFF8E1;
+  border-radius: 12px;
+
+  @media screen and (min-width: 720px) {
+    padding: 96px 48px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: block;
+      width: 332px;
+      height: 400px;
+
+      background: url("../img/tree.png") center no-repeat;
+
+      z-index: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 140px 48px;
+  }
+}
+
+.authors__static-text {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  font-family: $ubuntu;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba($trueBlack, 0.6);
+  text-align: center;
+
+  z-index: 1;
+
+  @media screen and (min-width: 720px) {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.authors__dynamic-text-wrapper {
+  margin: 16px 0 0;
+  padding: 0;
+  width: 100%;
+
+  z-index: 1;
+
+  @media screen and (min-width: 720px) {
+    margin-top: 0;
+  }
+}
+
+.authors__dynamic-text {
+  margin: 0;
+  padding: 0;
+
+  font-family: $amatic;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 48px;
+  color: rgba($trueBlack, 0.88);
+  text-align: center;
+  white-space: normal;
+
+  @media screen and (min-width: 720px) {
+    margin-top: 0;
+
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -1px;
+  }
+}
