@@ -190,7 +190,7 @@
         </li>
       </ul>
     </nav>
-  </header> 
+  </header>
   <main class="main-content">
     <div class="main-content__breadcrumbs breadcrumbs">
       <ul class="breadcrumbs__list">
@@ -232,7 +232,7 @@
             <img class="manufacturers-layout__img" src="img/manufac-petrovskiy.jpg" alt="Усадьба Перовских">
             <figcaption class="manufacturers-layout__inner">
               <h3 class="manufacturers-layout__name">Усадьба Перовских</h3>
-              <button class="manufacturers-layout__modal-button" type="button">Показать описание</button>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
             </figcaption>
           </figure>
         </li>
@@ -241,7 +241,7 @@
             <img class="manufacturers-layout__img" src="img/manufac-cuban.jpg" alt="Кубань-Вино">
             <figcaption class="manufacturers-layout__inner">
               <h3 class="manufacturers-layout__name">Кубань-Вино</h3>
-              <button class="manufacturers-layout__modal-button" type="button">Показать описание</button>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
             </figcaption>
           </figure>
         </li>
@@ -250,7 +250,7 @@
             <img class="manufacturers-layout__img" src="img/manufac-valley.jpg" alt="Долина">
             <figcaption class="manufacturers-layout__inner">
               <h3 class="manufacturers-layout__name">Долина</h3>
-              <button class="manufacturers-layout__modal-button" type="button">Показать описание</button>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
             </figcaption>
           </figure>
         </li>
@@ -259,7 +259,7 @@
             <img class="manufacturers-layout__img" src="img/manufac-victory.jpg" alt="Вилла Виктория">
             <figcaption class="manufacturers-layout__inner">
               <h3 class="manufacturers-layout__name">Вилла Виктория</h3>
-              <button class="manufacturers-layout__modal-button" type="button">Показать описание</button>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
             </figcaption>
           </figure>
         </li>
@@ -268,7 +268,7 @@
             <img class="manufacturers-layout__img" src="img/manufac-inkerman.jpg" alt="Инкерман">
             <figcaption class="manufacturers-layout__inner">
               <h3 class="manufacturers-layout__name">Инкерман</h3>
-              <button class="manufacturers-layout__modal-button" type="button">Показать описание</button>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
             </figcaption>
           </figure>
         </li>
@@ -307,5 +307,35 @@
       </p>
     </div>
   </footer>
+  <section class="manufacturer-modal">
+    <div class="manufacturer-modal__inner">
+      <div class="manufacturer-modal__heading-wrapper">
+        <h2 class="manufacturer-modal__heading">Производитель</h2>
+        <button class="manufacturer-modal__close-button" type="button">Закрыть окно</button>
+      </div>
+      <section class="manufacturer-modal__text-wrapper">
+        <h3 class="manufacturer-modal__name">Усадьба Перовских</h3>
+        <p class="manufacturer-modal__text">
+          Винодельческое хозяйство «Усадьба Перовских» было основано в 1834 году Николаем Перовским,
+          внебрачным сыном графа Разумовского.<br>
+          Его отец Алексей Кириллович Разумовский был невероятно образованной личностью – тайный советник,
+          сенатор, министр народного просвещения, отец пятерых детей в официальном браке,
+          а также родоначальник внебрачной ветви Перовских.
+
+        </p>
+        <p class="manufacturer-modal__text">
+          Фамилия Перовских дала России таких замечательных деятелей как Николай Перовский
+          (губернатор Таврической губернии и градоначальник Феодосии), Алексей Перовский,
+          также известный под псевдонимом Антоний Погорельский (русский писатель, член
+          Российской академии наук), Алексей Перовский – был родным дядей А. К. Толстого
+          и братьев Алексея и Владимира Жемчужниковых, а его племянники прославились на
+          всю Империю, создав литературную маску «Козьма Прутков», а также Лев Перовский
+          – министр внутренних дел Российской Империи, а также Управляющий Кабинетом
+          Eго Императорского Величества.
+        </p>
+      </section>
+    </div>
+  </section>
+  <script src="js/regions.min.js"></script>
 </body>
 </html>
