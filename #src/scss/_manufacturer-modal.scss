@@ -56,8 +56,6 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-
-  @include outline(deepskyblue);
 }
 
 .manufacturer-modal__heading {
@@ -70,8 +68,6 @@
   font-size: 24px;
   line-height: 32px;
   color: rgba($trueBlack, 0.88);
-
-  @include outline(tomato);
 }
 
 .manufacturer-modal__close-button {
@@ -87,8 +83,6 @@
   border: none;
 
   cursor: pointer;
-
-  outline: 1px solid tomato;
 }
 
 .manufacturer-modal__text-wrapper {
@@ -120,8 +114,6 @@
   font-size: 40px;
   line-height: 48px;
   color: rgba($trueBlack, 0.88);
-
-  @include outline(tomato);
 }
 
 .manufacturer-modal__text {
@@ -134,6 +126,4 @@
   font-size: 18px;
   line-height: 32px;
   color: $trueBlack;
-
-  @include outline(tomato);
 }
