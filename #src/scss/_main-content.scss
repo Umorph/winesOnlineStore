@@ -34,6 +34,10 @@
 .main-content__recommend-products {
   margin: 120px auto 0;
   padding: 0 16px;
+
+  @media screen and (min-width: 720px) {
+    padding: 0 48px;
+  }
 }
 
 .main-content__regions-block {
