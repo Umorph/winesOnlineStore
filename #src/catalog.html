@@ -106,13 +106,13 @@
       <ul class="header__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__cart-link" href="#">
-            <span class="user-nav__cart-counter">3</span>
+            <span class="user-nav__cart-counter">0</span>
             <span class="visually-hidden">Корзина товаров</span>
           </a>
         </li>
         <li class="user-nav__item">
           <a class="user-nav__favorite-link" href="#">
-            <span class="user-nav__favorite-counter">5</span>
+            <span class="user-nav__favorite-counter">0</span>
             <span class="visually-hidden">Избранное</span>
           </a>
         </li>
@@ -393,8 +393,8 @@
                       <p class="wine-card__price">{{ item.price }} ₽</p>
                       <p class="wine-card__volume">{{ item.volume }}L</p>
                     </div>
-                    <button class="wine-card__favorite-button" type="button" v-on:click="addToFavorite(item)">Добавить в избранное</button>
-                    <button class="wine-card__cart-button" type="button" v-on:click="addToCart(item)">В корзину</button>
+                    <button class="wine-card__favorite-button" type="button" v-on:click="addToFavorite(item)" onclick="parseLocalStorage()">Добавить в избранное</button>
+                    <button class="wine-card__cart-button" type="button" v-on:click="addToCart(item)" onclick="parseLocalStorage()">В корзину</button>
                   </div>
                 </figcaption>
               </figure>
