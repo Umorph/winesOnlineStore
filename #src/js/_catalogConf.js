@@ -76,7 +76,33 @@ catalogData = [
   }
 ]
 
-Vue.createApp({
+let cartModal = document.querySelector('.cart-popup'),
+  cartModalButton = document.querySelector('.cart-close-button'),
+  favoriteAddModal = document.querySelector('.favorite-add-popup'),
+  favoriteAddCloseButton = document.querySelector('.favorite-add-close-button'),
+  favoriteRemoveModal = document.querySelector('.favorite-remove-popup'),
+  favoriteRemoveCloseButton = document.querySelector('.favorite-remove-close-button');
+
+function togglePopup (popup) {
+  popup.classList.add('popup--opened');
+  setTimeout(function() {
+    popup.classList.remove('popup--opened');
+  }, 4000);
+}
+
+cartModalButton.addEventListener('click', function() {
+  cartModal.classList.remove('popup--opened');
+});
+
+favoriteAddCloseButton.addEventListener('click', function() {
+  favoriteAddModal.classList.remove('popup--opened');
+});
+
+favoriteRemoveCloseButton.addEventListener('click', function() {
+  favoriteRemoveModal.classList.remove('popup--opened');
+});
+
+const catalogApp = Vue.createApp({
   data() {
     return {
       data: catalogData
@@ -88,9 +114,13 @@ Vue.createApp({
       output.type = 'favorite';
 
       if (localStorage.getItem(output.type + '-' + item.id)) {
-        localStorage.removeItem(output.type + '-' + item.id)
+        localStorage.removeItem(output.type + '-' + item.id);
+        togglePopup(favoriteRemoveModal);
+        this.checkFavorites();
       } else {
         localStorage.setItem(output.type + '-' + item.id , JSON.stringify(output));
+        togglePopup(favoriteAddModal);
+        this.checkFavorites();
       }
     },
     addToCart: function(item) {
@@ -98,6 +128,7 @@ Vue.createApp({
       output.type = 'cart';
 
       localStorage.setItem(output.type + '-' + item.id + Math.random(), JSON.stringify(output));
+      togglePopup(cartModal);
     },
     _getItemData: function(item) {
       return {
@@ -115,6 +146,26 @@ Vue.createApp({
         "volume": item.volume,
         "img": item.img
       }
+    },
+    checkFavorites: function () {
+      for (let k=0; k<this.data.length; k++) {
+        let itemId = this.data[k].id;
+        this.data[k].inFavorite = false;
+
+        for (let i=0; i<localStorage.length; i++) {
+          let key = localStorage.key(i),
+            value = JSON.parse(localStorage.getItem(key));
+
+          if (value.id === itemId) {
+            if (value.type === 'favorite') {
+              this.data[k].inFavorite = true;
+              break
+            }
+          }
+        }
+      }
     }
   }
 }).mount('#app')
+
+document.addEventListener('DOMContentLoaded', catalogApp.checkFavorites);

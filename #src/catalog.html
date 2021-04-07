@@ -393,8 +393,19 @@
                       <p class="wine-card__price">{{ item.price }} ₽</p>
                       <p class="wine-card__volume">{{ item.volume }}L</p>
                     </div>
-                    <button class="wine-card__favorite-button" type="button" v-on:click="addToFavorite(item)" onclick="parseLocalStorage()">Добавить в избранное</button>
-                    <button class="wine-card__cart-button" type="button" v-on:click="addToCart(item)" onclick="parseLocalStorage()">В корзину</button>
+                    <button class="wine-card__favorite-button"
+                            v-bind:class="{'wine-card__favorite-button--in-favorite': item.inFavorite}"
+                            type="button"
+                            v-on:click="addToFavorite(item)"
+                            onclick="parseLocalStorage()">
+                      Добавить в избранное
+                    </button>
+                    <button class="wine-card__cart-button"
+                            type="button"
+                            v-on:click="addToCart(item)"
+                            onclick="parseLocalStorage()">
+                      В корзину
+                    </button>
                   </div>
                 </figcaption>
               </figure>
@@ -442,6 +453,30 @@
       </p>
     </div>
   </footer>
+  <div class="cart-popup popup">
+    <div class="popup__inner">
+      <p class="popup__text">
+        Добавлено в корзину. Нажмите ещё, чтобы добавить несколько или измените количество в корзине.
+      </p>
+      <button class="popup__close-button cart-close-button" type="button">Закрыть окно</button>
+    </div>
+  </div>
+  <div class="favorite-add-popup popup">
+    <div class="popup__inner">
+      <p class="popup__text">
+        Добавлено в избранное
+      </p>
+      <button class="popup__close-button favorite-add-close-button" type="button">Закрыть окно</button>
+    </div>
+  </div>
+  <div class="favorite-remove-popup popup">
+    <div class="popup__inner">
+      <p class="popup__text">
+        Удалено из избранного
+      </p>
+      <button class="popup__close-button favorite-remove-close-button" type="button">Закрыть окно</button>
+    </div>
+  </div>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="js/catalog.js"></script>
 </body>

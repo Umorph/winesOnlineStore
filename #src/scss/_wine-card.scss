@@ -254,6 +254,10 @@
   border-radius: 12px;
 
   cursor: pointer;
+
+  &--in-favorite {
+    background: url("../img/heart-broken.svg") center no-repeat #E0E0E0;
+  }
 }
 
 .wine-card__cart-button {
