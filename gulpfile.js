@@ -10,6 +10,7 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        data: project_folder + "/data/"
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -17,12 +18,14 @@ let path = {
         js: [source_folder + "/js/**.js", "!" + source_folder + "/_*.js"],
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
+        data: source_folder + "/data/*.json",
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        data: source_folder + "/data/*.json",
     },
     clean: "./" + project_folder + "/"
 }
@@ -138,6 +141,11 @@ function fonts() {
         .pipe(dest(path.build.fonts));
 }
 
+function data() {
+  return src(path.src.data)
+    .pipe(dest(path.build.data))
+}
+
 gulp.task('otf2ttf', function () {
     return src([source_folder + "/fonts/*otf"])
         .pipe(fonter({
@@ -172,13 +180,14 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.data], data);
 }
 
 function clean() {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, data), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
