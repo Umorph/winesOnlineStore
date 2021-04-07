@@ -191,479 +191,258 @@
       </ul>
     </nav>
   </header>
-<main class="main-content">
-  <section class="main-content__catalog catalog">
-    <div class="catalog__breadcrumbs breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Каталог</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Крым</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Красное</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link">Полусладкое</a>
-        </li>
-      </ul>
-    </div>
-    <h1 class="catalog__heading">Крымское красное полусладкое</h1>
-
-    <div class="catalog__layout catalog-layout">
-      <aside class="catalog-layout__aside aside">
-        <section class="aside__filer filter">
-          <div class="filter__wrapper">
-            <div class="filter__header">
-              <h2 class="filter__heading">Фильтры</h2>
-              <button class="filter__close-button" type="button">Закрыть окно</button>
-            </div>
-            <form class="filter__form" action="#" method="post">
-              <div class="filter__track">
-                <div class="filter__inputs-group filter__inputs-group--no-desktop">
-                  <b class="filter__group-name">Сортировка</b>
-                  <select class="filter__select" name="sort">
-                    <option value="1">Цена по убыванию</option>
-                    <option value="2">Цена по возрастанию</option>
-                  </select>
-                </div>
-                <div class="filter__inputs-group">
-                  <b class="filter__group-name">Цена</b>
-                  <select class="filter__select" name="price">
-                    <option value="1">500 - 1000 ₽</option>
-                    <option value="2">1000 - 1500 ₽</option>
-                    <option value="2">1500 - 2000 ₽</option>
-                  </select>
-                </div>
-                <fieldset class="filter__inputs-group">
-                  <legend class="filter__group-name">Регион</legend>
-                  <ul class="filter__group-list">
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="region-krim">
-                      <label class="filter__label" for="region-krim">Крым</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="region-cuban">
-                      <label class="filter__label" for="region-cuban">Кубань</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="region-caucasus">
-                      <label class="filter__label" for="region-caucasus">Кавказ</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="filter__inputs-group">
-                  <legend class="filter__group-name">Цвет</legend>
-                  <ul class="filter__group-list">
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="color-red">
-                      <label class="filter__label" for="color-red">Красное</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="color-white">
-                      <label class="filter__label" for="color-white">Белое</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="color-pink">
-                      <label class="filter__label" for="color-pink">Розовое</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="color-orange">
-                      <label class="filter__label" for="color-orange">Оранжевое</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="filter__inputs-group">
-                  <legend class="filter__group-name">Сахар</legend>
-                  <ul class="filter__group-list">
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="type-semi-sweet">
-                      <label class="filter__label" for="type-semi-sweet">Полусладкое</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="type-dry">
-                      <label class="filter__label" for="type-dry">Сухое</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="type-sparkling">
-                      <label class="filter__label" for="type-sparkling">Игристое</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="type-merlot">
-                      <label class="filter__label" for="type-merlot">Мерло</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="type-brut">
-                      <label class="filter__label" for="type-brut">Брют</label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="filter__inputs-group">
-                  <legend class="filter__group-name">Атмосфера</legend>
-                  <ul class="filter__group-list">
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="for-every-day">
-                      <label class="filter__label" for="for-every-day">На каждый день</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="for-holiday">
-                      <label class="filter__label" for="for-holiday">Праздник</label>
-                    </li>
-                    <li class="filter__group-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="for-dating">
-                      <label class="filter__label" for="for-dating">Свидание</label>
-                    </li>
-                  </ul>
-                </fieldset>
-              </div>
-              <div class="filter__actions">
-                <button class="filter__reset-desktop" type="button">Сбросить фильтры</button>
-                <button class="filter__reset-button" type="reset">Сбросить</button>
-                <button class="filter__apply-button" type="button">Применить</button>
-              </div>
-            </form>
-          </div>
-        </section>
-        <section class="aside__help-find help-find">
-          <h2 class="help-find__heading">Не знаю что взять</h2>
-          <p class="help-find__hint">Напишите — поможем выбрать.</p>
-          <a class="help-find__telegram-link" href="#" target="_blank">Telegram</a>
-        </section>
-      </aside>
-      <div class="catalog-layout__content">
-        <div class="catalog-layout__results-wrapper">
-          <p class="catalog-layout__results-count">Мы нашли 35 вариантов</p>
-          <button class="catalog-layout__filter-button" type="button">Фильтры</button>
-          <button class="catalog-layout__price-sort" type="button">Цена по убыванию</button>
-        </div>
-        <ul class="catalog-layout__list">
-          <li class="catalog-layout__item wine-card">
-            <figure class="wine-card__inner">
-              <div class="wine-card__img-wrapper">
-                <img class="wine-card__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
-              </div>
-              <figcaption class="wine-card__wine-desc">
-                <h3 class="wine-card__name">Солярис</h3>
-                <p class="wine-card__short-desc">Красное, полусладкое</p>
-                <ul class="wine-card__params-list">
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Цвет</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красное</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Содержание сахара</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Полусладкое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Регион</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Крым</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Сортовой состав</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Каберне Совиньон, Каберне Фран, Красные Сорта Винограда</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Крепость</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">12%</p>
-                  </li>
-                </ul>
-                <div class="wine-card__buttons-wrapper">
-                  <div class="wine-card__price-wrapper">
-                    <p class="wine-card__price">1350 ₽</p>
-                    <p class="wine-card__volume">0.65L</p>
-                  </div>
-                  <button class="wine-card__favorite-button" type="button">Добавить в избранное</button>
-                  <button class="wine-card__cart-button" type="button">В корзину</button>
-                </div>
-              </figcaption>
-            </figure>
+  <main class="main-content" id="app">
+    <section class="main-content__catalog catalog">
+      <div class="catalog__breadcrumbs breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="index.html">Главная</a>
           </li>
-          <li class="catalog-layout__item wine-card">
-            <figure class="wine-card__inner">
-              <div class="wine-card__img-wrapper">
-                <img class="wine-card__image" src="img/item-krim-somelie.jpg" alt="Вино «Крымский сомелье»">
-              </div>
-              <figcaption class="wine-card__wine-desc">
-                <h3 class="wine-card__name">Крымский сомелье</h3>
-                <p class="wine-card__short-desc">Красное, полусладкое</p>
-                <ul class="wine-card__params-list">
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Цвет</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красное</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Содержание сахара</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Полусладкое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Регион</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Крым</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Сортовой состав</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красные Сорта Винограда</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Крепость</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">12%</p>
-                  </li>
-                </ul>
-                <div class="wine-card__buttons-wrapper">
-                  <div class="wine-card__price-wrapper">
-                    <p class="wine-card__price">1100 ₽</p>
-                    <p class="wine-card__volume">0.6L</p>
-                  </div>
-                  <button class="wine-card__favorite-button" type="button">Добавить в избранное</button>
-                  <button class="wine-card__cart-button" type="button">В корзину</button>
-                </div>
-              </figcaption>
-            </figure>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог</a>
           </li>
-          <li class="catalog-layout__item wine-card">
-            <figure class="wine-card__inner">
-              <div class="wine-card__img-wrapper">
-                <img class="wine-card__image" src="img/item-renessans.jpg" alt="Вино «Ренессанс»">
-              </div>
-              <figcaption class="wine-card__wine-desc">
-                <h3 class="wine-card__name">Ренессанс</h3>
-                <p class="wine-card__short-desc">Белое, Сухое</p>
-                <ul class="wine-card__params-list">
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Цвет</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Белое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Содержание сахара</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Сухое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Регион</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Крым</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Сортовой состав</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красные Сорта Винограда</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Крепость</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">12%</p>
-                  </li>
-                </ul>
-                <div class="wine-card__buttons-wrapper">
-                  <div class="wine-card__price-wrapper">
-                    <p class="wine-card__price">900 ₽</p>
-                    <p class="wine-card__volume">0.72L</p>
-                  </div>
-                  <button class="wine-card__favorite-button" type="button">Добавить в избранное</button>
-                  <button class="wine-card__cart-button" type="button">В корзину</button>
-                </div>
-              </figcaption>
-            </figure>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Крым</a>
           </li>
-          <li class="catalog-layout__item wine-card">
-            <figure class="wine-card__inner">
-              <div class="wine-card__img-wrapper">
-                <img class="wine-card__image" src="img/item-krim-summer.jpg" alt="Вино «Крымское лето»">
-              </div>
-              <figcaption class="wine-card__wine-desc">
-                <h3 class="wine-card__name">Крымское лето</h3>
-                <p class="wine-card__short-desc">Красное, полусладкое</p>
-                <ul class="wine-card__params-list">
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Цвет</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красное</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Содержание сахара</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Полусладкое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Регион</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Крым</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Сортовой состав</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Бастардо</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Крепость</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">12%</p>
-                  </li>
-                </ul>
-                <div class="wine-card__buttons-wrapper">
-                  <div class="wine-card__price-wrapper">
-                    <p class="wine-card__price">750 ₽</p>
-                    <p class="wine-card__volume">0.7L</p>
-                  </div>
-                  <button class="wine-card__favorite-button" type="button">Добавить в избранное</button>
-                  <button class="wine-card__cart-button" type="button">В корзину</button>
-                </div>
-              </figcaption>
-            </figure>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Красное</a>
           </li>
-          <li class="catalog-layout__item wine-card">
-            <figure class="wine-card__inner">
-              <div class="wine-card__img-wrapper">
-                <img class="wine-card__image" src="img/item-south-capital.jpg" alt="Вино «Южная столица»">
-              </div>
-              <figcaption class="wine-card__wine-desc">
-                <h3 class="wine-card__name">Южная столица</h3>
-                <p class="wine-card__short-desc">Красное, полусладкое</p>
-                <ul class="wine-card__params-list">
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Цвет</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красное</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Содержание сахара</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Полусладкое</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Регион</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Крым</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Сортовой состав</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">Красные Сорта Винограда</p>
-                  </li>
-                  <li class="wine-card__params-item">
-                    <div class="wine-card__name-wrapper">
-                      <p class="wine-card__param-name">Крепость</p>
-                      <div class="wine-card__dash"></div>
-                    </div>
-                    <p class="wine-card__param-value">12%</p>
-                  </li>
-                </ul>
-                <div class="wine-card__buttons-wrapper">
-                  <div class="wine-card__price-wrapper">
-                    <p class="wine-card__price">680 ₽</p>
-                    <p class="wine-card__volume">0.7L</p>
-                  </div>
-                  <button class="wine-card__favorite-button" type="button">Добавить в избранное</button>
-                  <button class="wine-card__cart-button" type="button">В корзину</button>
-                </div>
-              </figcaption>
-            </figure>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Полусладкое</a>
           </li>
         </ul>
-        <button class="catalog-layout__more-button" type="button">Показать еще 5</button>
-        <div class="catalog-layout__pagination pagination">
-          <a class="pagination__prev-link" href="#">Назад</a>
-          <ul class="pagination__list">
-            <li class="pagination__item">
-              <a class="pagination__page-link pagination__page-link--current">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__page-link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__page-link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <p class="pagination__dots">...</p>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__page-link" href="#">7</a>
+      </div>
+      <h1 class="catalog__heading">Крымское красное полусладкое</h1>
+
+      <div class="catalog__layout catalog-layout">
+        <aside class="catalog-layout__aside aside">
+          <section class="aside__filer filter">
+            <div class="filter__wrapper">
+              <div class="filter__header">
+                <h2 class="filter__heading">Фильтры</h2>
+                <button class="filter__close-button" type="button">Закрыть окно</button>
+              </div>
+              <form class="filter__form" action="#" method="post">
+                <div class="filter__track">
+                  <div class="filter__inputs-group filter__inputs-group--no-desktop">
+                    <b class="filter__group-name">Сортировка</b>
+                    <select class="filter__select" name="sort">
+                      <option value="1">Цена по убыванию</option>
+                      <option value="2">Цена по возрастанию</option>
+                    </select>
+                  </div>
+                  <div class="filter__inputs-group">
+                    <b class="filter__group-name">Цена</b>
+                    <select class="filter__select" name="price">
+                      <option value="1">500 - 1000 ₽</option>
+                      <option value="2">1000 - 1500 ₽</option>
+                      <option value="2">1500 - 2000 ₽</option>
+                    </select>
+                  </div>
+                  <fieldset class="filter__inputs-group">
+                    <legend class="filter__group-name">Регион</legend>
+                    <ul class="filter__group-list">
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="region-krim">
+                        <label class="filter__label" for="region-krim">Крым</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="region-cuban">
+                        <label class="filter__label" for="region-cuban">Кубань</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="region-caucasus">
+                        <label class="filter__label" for="region-caucasus">Кавказ</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__inputs-group">
+                    <legend class="filter__group-name">Цвет</legend>
+                    <ul class="filter__group-list">
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="color-red">
+                        <label class="filter__label" for="color-red">Красное</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="color-white">
+                        <label class="filter__label" for="color-white">Белое</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="color-pink">
+                        <label class="filter__label" for="color-pink">Розовое</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="color-orange">
+                        <label class="filter__label" for="color-orange">Оранжевое</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__inputs-group">
+                    <legend class="filter__group-name">Сахар</legend>
+                    <ul class="filter__group-list">
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="type-semi-sweet">
+                        <label class="filter__label" for="type-semi-sweet">Полусладкое</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="type-dry">
+                        <label class="filter__label" for="type-dry">Сухое</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="type-sparkling">
+                        <label class="filter__label" for="type-sparkling">Игристое</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="type-merlot">
+                        <label class="filter__label" for="type-merlot">Мерло</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="type-brut">
+                        <label class="filter__label" for="type-brut">Брют</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__inputs-group">
+                    <legend class="filter__group-name">Атмосфера</legend>
+                    <ul class="filter__group-list">
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="for-every-day">
+                        <label class="filter__label" for="for-every-day">На каждый день</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="for-holiday">
+                        <label class="filter__label" for="for-holiday">Праздник</label>
+                      </li>
+                      <li class="filter__group-item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" id="for-dating">
+                        <label class="filter__label" for="for-dating">Свидание</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+                <div class="filter__actions">
+                  <button class="filter__reset-desktop" type="button">Сбросить фильтры</button>
+                  <button class="filter__reset-button" type="reset">Сбросить</button>
+                  <button class="filter__apply-button" type="button">Применить</button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="aside__help-find help-find">
+            <h2 class="help-find__heading">Не знаю что взять</h2>
+            <p class="help-find__hint">Напишите — поможем выбрать.</p>
+            <a class="help-find__telegram-link" href="#" target="_blank">Telegram</a>
+          </section>
+        </aside>
+        <div class="catalog-layout__content">
+          <div class="catalog-layout__results-wrapper">
+            <p class="catalog-layout__results-count">Мы нашли {{ data.length }} вариантов</p>
+            <button class="catalog-layout__filter-button" type="button">Фильтры</button>
+            <button class="catalog-layout__price-sort" type="button">Цена по убыванию</button>
+          </div>
+          <ul class="catalog-layout__list">
+            <li class="catalog-layout__item wine-card" v-for="item in data">
+              <figure class="wine-card__inner">
+                <div class="wine-card__img-wrapper">
+                  <picture>
+                    <img class="wine-card__image" v-bind:src=item.img alt="Вино «Солярис»">
+                  </picture>
+                </div>
+                <figcaption class="wine-card__wine-desc">
+                  <h3 class="wine-card__name">{{ item.name }}</h3>
+                  <p class="wine-card__short-desc">{{ item.shortDescription }}</p>
+                  <ul class="wine-card__params-list">
+                    <li class="wine-card__params-item">
+                      <div class="wine-card__name-wrapper">
+                        <p class="wine-card__param-name">Цвет</p>
+                        <div class="wine-card__dash"></div>
+                      </div>
+                      <p class="wine-card__param-value">{{ item.description.color }}</p>
+                    </li>
+                    <li class="wine-card__params-item">
+                      <div class="wine-card__name-wrapper">
+                        <p class="wine-card__param-name">Содержание сахара</p>
+                        <div class="wine-card__dash"></div>
+                      </div>
+                      <p class="wine-card__param-value">{{ item.description.sugar }}</p>
+                    </li>
+                    <li class="wine-card__params-item">
+                      <div class="wine-card__name-wrapper">
+                        <p class="wine-card__param-name">Регион</p>
+                        <div class="wine-card__dash"></div>
+                      </div>
+                      <p class="wine-card__param-value">{{ item.description.region }}</p>
+                    </li>
+                    <li class="wine-card__params-item">
+                      <div class="wine-card__name-wrapper">
+                        <p class="wine-card__param-name">Сортовой состав</p>
+                        <div class="wine-card__dash"></div>
+                      </div>
+                      <p class="wine-card__param-value">{{ item.description.sort }}</p>
+                    </li>
+                    <li class="wine-card__params-item">
+                      <div class="wine-card__name-wrapper">
+                        <p class="wine-card__param-name">Крепость</p>
+                        <div class="wine-card__dash"></div>
+                      </div>
+                      <p class="wine-card__param-value">{{ item.description.alcohol }}</p>
+                    </li>
+                  </ul>
+                  <div class="wine-card__buttons-wrapper">
+                    <div class="wine-card__price-wrapper">
+                      <p class="wine-card__price">{{ item.price }} ₽</p>
+                      <p class="wine-card__volume">{{ item.volume }}L</p>
+                    </div>
+                    <button class="wine-card__favorite-button" type="button" v-on:click="addToFavorite(item)">Добавить в избранное</button>
+                    <button class="wine-card__cart-button" type="button" v-on:click="addToCart(item)">В корзину</button>
+                  </div>
+                </figcaption>
+              </figure>
             </li>
           </ul>
-          <a class="pagination__next-link" href="#">Вперед</a>
+          <button class="catalog-layout__more-button" type="button">Показать еще 5</button>
+          <div class="catalog-layout__pagination pagination">
+            <a class="pagination__prev-link" href="#">Назад</a>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__page-link pagination__page-link--current">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__page-link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__page-link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <p class="pagination__dots">...</p>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__page-link" href="#">7</a>
+              </li>
+            </ul>
+            <a class="pagination__next-link" href="#">Вперед</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="catalog__tagline">
-      <p class="catalog__tagline-text">
-        Классические и аутентичные, популярные и известные лишь немногим знатокам, молодые и выдержанные, для особых
-        случаев, подарков коллегам и встреч с друзьями! Наши эксперты выбрали лучшее, что представлено в мире: перед
-        вами впечатляющая коллекция вин, где каждый найдет образец по вкусу.
+      <div class="catalog__tagline">
+        <p class="catalog__tagline-text">
+          Классические и аутентичные, популярные и известные лишь немногим знатокам, молодые и выдержанные, для особых
+          случаев, подарков коллегам и встреч с друзьями! Наши эксперты выбрали лучшее, что представлено в мире: перед
+          вами впечатляющая коллекция вин, где каждый найдет образец по вкусу.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        Данный сайт не является интернет-магазином. Мы работаем в строгом соответствии с законами РФ: не продаём и не
+        доставляем алкоголь в ночное время; не продаём и не доставляем алкоголь несовершеннолетним; не осуществляем
+        дистанционную продажу или продажу алкоголя иными способами, запрещёнными законами РФ.
       </p>
     </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="footer__inner">
-    <p class="footer__text">
-      Данный сайт не является интернет-магазином. Мы работаем в строгом соответствии с законами РФ: не продаём и не
-      доставляем алкоголь в ночное время; не продаём и не доставляем алкоголь несовершеннолетним; не осуществляем
-      дистанционную продажу или продажу алкоголя иными способами, запрещёнными законами РФ.
-    </p>
-  </div>
-</footer>
-<script src="js/catalog.min.js"></script>
+  </footer>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>
