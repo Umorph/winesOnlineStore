@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Крымское лето",
+    "description": "Красное, полусладкое",
+    "price": "1200",
+    "volume": "0.7",
+    "img": "img/item-krim-summer.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Ренессанс",
+    "description": "Белое, полусладкое",
+    "price": "900",
+    "volume": "0.72",
+    "img": "img/item-renessans.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Солярис",
+    "description": "Белое, сухое",
+    "price": "1350",
+    "volume": "0.65",
+    "img": "img/item-solaris.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Крымский сомелье",
+    "description": "Красное, сухое",
+    "price": "1100",
+    "volume": "0.6",
+    "img": "img/item-krim-somelie.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Южная столица",
+    "description": "Игристое, полусладкое",
+    "price": "680",
+    "volume": "0.7",
+    "img": "img/item-south-capital.jpg"
+  }
+]
