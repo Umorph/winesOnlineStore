@@ -21,7 +21,3 @@ function parseLocalStorage() {
 }
 
 document.addEventListener('DOMContentLoaded', parseLocalStorage);
-
-window.addEventListener('storage', function(e) {
-  console.log('qwe');
-})

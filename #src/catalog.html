@@ -336,12 +336,13 @@
         </aside>
         <div class="catalog-layout__content">
           <div class="catalog-layout__results-wrapper">
-            <p class="catalog-layout__results-count">Мы нашли {{ data.length }} вариантов</p>
+            <p class="catalog-layout__results-count" v-if="data.length >= 1">Мы нашли {{ data.length }} вариантов</p>
+            <p class="catalog-layout__results-count" v-else>Мы ничего не нашли</p>
             <button class="catalog-layout__filter-button" type="button">Фильтры</button>
             <button class="catalog-layout__price-sort" type="button">Цена по убыванию</button>
           </div>
           <ul class="catalog-layout__list">
-            <li class="catalog-layout__item wine-card" v-for="item in data">
+            <li class="catalog-layout__item wine-card" v-for="item in data" v-if="data.length >= 1">
               <figure class="wine-card__inner">
                 <div class="wine-card__img-wrapper">
                   <picture>
@@ -409,6 +410,11 @@
                   </div>
                 </figcaption>
               </figure>
+            </li>
+            <li class="catalog-layout__item catalog-layout__item--no-data" v-else>
+              <p class="catalog-layout__no-data-text">
+                С такими параметрами пока ничего нет. Попробуйте убрать некоторые фильтры.
+              </p>
             </li>
           </ul>
           <button class="catalog-layout__more-button" type="button">Показать еще 5</button>

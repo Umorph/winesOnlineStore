@@ -105,7 +105,10 @@ favoriteRemoveCloseButton.addEventListener('click', function() {
 const catalogApp = Vue.createApp({
   data() {
     return {
-      data: catalogData
+      data: catalogData,
+      favoriteItems: [],
+      cartItems: [],
+      totalPrice: 0
     }
   },
   methods: {
@@ -164,8 +167,91 @@ const catalogApp = Vue.createApp({
           }
         }
       }
+    },
+    getFavoriteData: function () {
+      this.favoriteItems = [];
+      for (let i=0; i<localStorage.length; i++) {
+        let key = localStorage.key(i),
+          value = JSON.parse(localStorage.getItem(key));
+
+        if (value.type === 'favorite') {
+          value.visible = true;
+          this.favoriteItems.push(value);
+        }
+      }
+    },
+    removeFromFavorite: function (item) {
+      item.visible = false;
+      localStorage.removeItem('favorite-' + item.id);
+    },
+    returnToFavorite: function (item) {
+      item.visible = true;
+      localStorage.setItem('favorite-' + item.id, JSON.stringify(item));
+    },
+    getCartData: function () {
+      this.cartItems = [];
+
+      for (let i=0; i<localStorage.length; i++) {
+        let key = localStorage.key(i),
+          value = JSON.parse(localStorage.getItem(key));
+
+        if (value.type === 'cart') {
+          let itemExistInData = false
+          value.count = 1
+
+          for (let k=0; k < this.cartItems.length; k++) {
+            if (this.cartItems[k].id === value.id) {
+              this.cartItems[k].count++
+              itemExistInData = true;
+              this.countTotalPrice();
+              break
+            }
+          }
+          if (!itemExistInData) {
+            this.cartItems.push(value);
+            this.countTotalPrice();
+          }
+        }
+      }
+    },
+    addMoreToCart: function (item) {
+      item.count++
+      localStorage.setItem(item.type + '-' + item.id + Math.random(), JSON.stringify(item));
+      this.getCartData();
+      this.countTotalPrice();
+    },
+    removeItemFromCart: function (item) {
+      if (item.count > 1) {
+        item.count--
+        for (let i=0; i<localStorage.length; i++) {
+          let key = localStorage.key(i),
+            value = JSON.parse(localStorage.getItem(key));
+
+          if (value.type === 'cart') {
+            if (value.name === item.name) {
+              localStorage.removeItem(key);
+              this.getCartData();
+              this.countTotalPrice();
+              break
+            }
+          }
+        }
+      } else {
+        console.log('Осталась одна позиция товара');
+      }
+    },
+    countTotalPrice: function () {
+      let counter = 0;
+
+      for (let i=0; i<this.cartItems.length; i++) {
+        counter += Number(this.cartItems[i].price * this.cartItems[i].count);
+      }
+
+      this.totalPrice = counter;
     }
   }
-}).mount('#app')
+}).mount('#app');
 
 document.addEventListener('DOMContentLoaded', catalogApp.checkFavorites);
+document.addEventListener('DOMContentLoaded', catalogApp.getFavoriteData);
+document.addEventListener('DOMContentLoaded', catalogApp.getCartData);

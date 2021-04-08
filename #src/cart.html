@@ -191,7 +191,7 @@
     </ul>
   </nav>
 </header>
-<main class="main-content">
+<main class="main-content" id="app">
   <div class="main-content__breadcrumbs breadcrumbs">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
@@ -205,47 +205,26 @@
   <section class="main-content__cart cart">
     <h1 class="cart__heading">Корзина</h1>
     <ul class="cart__list">
-      <li class="cart__item cart-item">
+      <li class="cart__item cart-item" v-for="item in cartItems">
         <figure class="cart-item__inner">
           <div class="cart-item__image-wrapper">
-            <img class="cart-item__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
+            <picture>
+              <img class="cart-item__image" v-bind:src=item.img alt="Вино «Солярис»">
+            </picture>
           </div>
           <figcaption class="cart-item__wine-desc">
-            <b class="cart-item__name">Солярис</b>
-            <p class="cart-item__short-desc">Белое, полусладкое</p>
+            <b class="cart-item__name">{{ item.name }}</b>
+            <p class="cart-item__short-desc">{{ item.shortDescription }}</p>
             <div class="cart-item__price-wrapper">
-              <p class="cart-item__price">1350 ₽</p>
-              <p class="cart-item__volume">0.65L</p>
+              <p class="cart-item__price">{{ item.price }} ₽</p>
+              <p class="cart-item__volume">{{ item.volume }}L</p>
             </div>
           </figcaption>
           <div class="cart-item__cart-controls">
             <div class="cart-item__count-wrapper">
-              <button class="cart-item__count-button cart-item__count-button--decrease">-</button>
-              <span class="cart-item__count">1</span>
-              <button class="cart-item__count-button cart-item__count-button--increase">+</button>
-            </div>
-            <button class="cart-item__del-button" type="button">Убрать</button>
-          </div>
-        </figure>
-      </li>
-      <li class="cart__item cart-item">
-        <figure class="cart-item__inner">
-          <div class="cart-item__image-wrapper">
-            <img class="cart-item__image" src="img/item-solaris.jpg" alt="Вино «Солярис»">
-          </div>
-          <figcaption class="cart-item__wine-desc">
-            <b class="cart-item__name">Солярис</b>
-            <p class="cart-item__short-desc">Белое, полусладкое</p>
-            <div class="cart-item__price-wrapper">
-              <p class="cart-item__price">1350 ₽</p>
-              <p class="cart-item__volume">0.65L</p>
-            </div>
-          </figcaption>
-          <div class="cart-item__cart-controls">
-            <div class="cart-item__count-wrapper">
-              <button class="cart-item__count-button cart-item__count-button--decrease">-</button>
-              <span class="cart-item__count">1</span>
-              <button class="cart-item__count-button cart-item__count-button--increase">+</button>
+              <button class="cart-item__count-button cart-item__count-button--decrease" v-on:click="removeItemFromCart(item)">-</button>
+              <span class="cart-item__count">{{ item.count }}</span>
+              <button class="cart-item__count-button cart-item__count-button--increase" v-on:click="addMoreToCart(item)">+</button>
             </div>
             <button class="cart-item__del-button" type="button">Убрать</button>
           </div>
@@ -258,10 +237,10 @@
         прямо на сайте, но вы можете его заказать.
       </p>
     </div>
-    <form class="cart__form cart-form" action="#">
+    <form class="cart__form cart-form" action="https://echo.htmlacademy.ru" method="post">
       <strong class="cart-form__cost">
         Всего:
-        <span class="cart-form__cost-price">5550</span> ₽
+        <span class="cart-form__cost-price">{{ totalPrice }}</span> ₽
       </strong>
       <ul class="cart-form__list">
         <li class="cart-form__item">
@@ -285,6 +264,10 @@
           <textarea class="cart-form__textarea" name="user-comment" id="comment"></textarea>
         </li>
       </ul>
+      <div class="visually-hidden" v-for:="item in cartItems">
+        <input type="text" name="item-name" v-bind:value="item.name" readonly>
+        <input type="text" name="item-count" v-bind:value="item.count" readonly>
+      </div>
       <button class="cart-form__submit-button" type="submit">Отправить заявку</button>
     </form>
   </section>
@@ -298,5 +281,31 @@
     </p>
   </div>
 </footer>
+<div class="cart-popup popup">
+  <div class="popup__inner">
+    <p class="popup__text">
+      Добавлено в корзину. Нажмите ещё, чтобы добавить несколько или измените количество в корзине.
+    </p>
+    <button class="popup__close-button cart-close-button" type="button">Закрыть окно</button>
+  </div>
+</div>
+<div class="favorite-add-popup popup">
+  <div class="popup__inner">
+    <p class="popup__text">
+      Добавлено в избранное
+    </p>
+    <button class="popup__close-button favorite-add-close-button" type="button">Закрыть окно</button>
+  </div>
+</div>
+<div class="favorite-remove-popup popup">
+  <div class="popup__inner">
+    <p class="popup__text">
+      Удалено из избранного
+    </p>
+    <button class="popup__close-button favorite-remove-close-button" type="button">Закрыть окно</button>
+  </div>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="js/cart.js"></script>
 </body>
 </html>

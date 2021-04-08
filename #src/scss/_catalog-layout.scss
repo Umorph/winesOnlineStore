@@ -168,6 +168,46 @@
   padding: 0;
 }
 
+.catalog-layout__item--no-data {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 24px;
+
+  background: #FFF8E1;
+  border-radius: 12px;
+}
+
+.catalog-layout__no-data-text {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 0 12px 72px;
+
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: rgba($trueBlack, 0.88);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    background: url("../img/glass.svg") center no-repeat;
+
+    transform: translateY(-24px);
+  }
+}
+
 .catalog-layout__more-button {
   box-sizing: border-box;
   margin: 48px 0 0;
