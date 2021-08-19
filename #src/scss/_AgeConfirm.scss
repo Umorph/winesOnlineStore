@@ -1,0 +1,78 @@
+﻿.age {
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+    margin: 84px auto 116px;
+    @media screen and (min-width: 720px) {
+        margin: 392px auto;
+    }
+    @media screen and (min-width: 1200px) {
+        margin: 264px auto;
+    }
+    @media screen and (min-width: 1600px) {
+        margin: 420px auto;
+    }
+}
+
+.age__title {
+    margin: 0;
+    padding: 0;
+    font-family: $amatic;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: rgba($trueBlack, 0.88);
+    @media screen and (min-width: 720px) {
+        font-size: 80px;
+        line-height: 88px;
+        letter-spacing: -1px;
+    }
+}
+
+.age__subtitle {
+    margin: 16px 0 48px 0;
+    padding: 0;
+    font-family: $ubuntu;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: rgba($trueBlack, 0.88);
+}
+
+.age__button {
+    height: 56px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    text-align: center;
+}
+
+.btn--no {
+    width: 80px;
+    border: none;
+    background-color: $trueWhite;
+}
+
+.btn--no:hover {
+    border: 2px solid rgba(red, 0.88);
+}
+
+.btn--yes {
+    width: 71px;
+    background-color: $yellowMain;
+}
+
+.btn--yes__negative {
+    width: 284px;
+    background-color: $yellowMain;
+}

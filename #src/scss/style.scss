@@ -1,6 +1,79 @@
+// Main style files
 @import "mixins.scss";
 @import "variables.scss";
 @import "scaffolding.scss";
 @import "fonts.scss";
 
-@import "qwe.scss";
+// age confirm
+@import "AgeConfirm";
+
+// header
+@import "wine-type";
+@import "offcanvas";
+@import "user-nav";
+@import "menu-dropdown";
+@import "site-nav";
+@import "header";
+
+// main page
+@import "excerpt";
+@import "authors";
+@import "item-card";
+@import "products";
+@import "regions-block";
+@import "inst";
+
+// catalog
+@import "breadcrumbs";
+@import "filter";
+@import "help-find";
+@import "aside";
+@import "wine-card";
+@import "pagination";
+@import "catalog-layout";
+@import "catalog";
+
+// item
+@import "manufacturer-info";
+@import "wine-desc";
+@import "swiper-bundle";
+@import "same-vine";
+@import "benefits";
+@import "description";
+
+// how to order
+@import "delivery";
+@import "package-preview";
+@import "order-steps";
+@import "tip";
+@import "order-layout";
+
+// regions
+@import "manufacturers-layout";
+@import "manufacturer-modal";
+
+// contacs
+@import "contacts";
+
+// document 404
+@import "err-document";
+
+// policy
+@import "policy";
+
+// favorite
+@import "favorite";
+
+// cart
+@import "cart-item";
+@import "cart-form";
+@import "cart";
+
+// main container
+@import "main-content";
+
+// footer
+@import "footer";
+
+// cart modal
+@import "cart-modal";

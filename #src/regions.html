@@ -1,0 +1,341 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Своё вино | Регионы / Кубань</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="header__inner">
+      <a class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" alt="Своё Вино">
+      </a>
+      <div class="header__site-nav-wrapper">
+        <ul class="header__site-nav site-nav">
+          <li class="site-nav__item site-nav__item--dropdown-wrapper">
+            <button class="site-nav__dropdown-button" onclick="toggleWindow()" type="button">Подобрать вино</button>
+            <table class="site-nav__menu-dropdown menu-dropdown">
+              <thead class="menu-dropdown__table-head">
+              <tr class="menu-dropdown__row">
+                <th class="menu-dropdown__heading">По регионам</th>
+                <th class="menu-dropdown__heading">Цвет</th>
+                <th class="menu-dropdown__heading">Сахар</th>
+              </tr>
+              </thead>
+              <tbody class="menu-dropdown__table-body">
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Крым
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Красное
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кубань
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Оранжевое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусладкое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Кавказ
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Розовое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Полусухое
+                  </a>
+                </td>
+              </tr>
+              <tr class="menu-dropdown__row">
+                <td class="menu-dropdown__item"></td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Белое
+                  </a>
+                </td>
+                <td class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="#">
+                    Сухое
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Как заказать</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="header__user-nav user-nav">
+        <li class="user-nav__item">
+          <a class="user-nav__cart-link" href="#">
+            <span class="user-nav__cart-counter">3</span>
+            <span class="visually-hidden">Корзина товаров</span>
+          </a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__favorite-link" href="#">
+            <span class="user-nav__favorite-counter">5</span>
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li class="user-nav__item user-nav__item--burger-wrapper">
+          <button class="user-nav__burger-button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="user-nav__offcanvas offcanvas">
+            <div class="offcanvas__window">
+              <ul class="offcanvas__list">
+                <li class="offcanvas__item">
+                  <button class="offcanvas__toggle-button" type="button" onclick="toggleOffcanvasDropdown()">
+                    Подобрать вино
+                  </button>
+                  <div class="offcanvas__toggle-inner">
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--region-icon">По регионам</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Крым</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Кубань</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Кавказ</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--color-icon">Цвет</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Красное</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Оранжевое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Розовое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Белое</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="offcanvas__wine-type wine-type">
+                      <h3 class="wine-type__heading wine-type__heading--sugar-icon">Сахар</h3>
+                      <ul class="wine-type__list">
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Сладкое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Полусладкое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Полусухое</a>
+                        </li>
+                        <li class="wine-type__item">
+                          <a class="wine-type__link" href="#">Сухое</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="offcanvas__item">
+                  <a class="offcanvas__link" href="order.html">Как заказать</a>
+                </li>
+                <li class="offcanvas__item">
+                  <a class="offcanvas__link" href="Contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="main-content__breadcrumbs breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--home-icon" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Кубань</a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="main-content__heading">Вина солнечной Кубани</h1>
+    <div class="main-content__region-description description">
+      <div class="description__inner">
+        <section class="description__benefits benefits">
+          <p class="benefits__text">
+            Таманский полуостров – удивительное место. Самый солнечный регион страны, расположенный между двух
+            морей – Азовским и Черным, находится на той же широте, что и
+            <b class="benefits__bold-text">Бордо во Франции.</b>
+          </p>
+        </section>
+        <section class="description__terroir benefits">
+          <h2 class="benefits__heading">Терруар</h2>
+          <p class="benefits__text">
+            Хорошо дренируемые глинистые, гравийно-известняковые почвы с большим содержанием мела и сланцевой
+            подпочвой имеют потенциал настоящего “Grand Cru Bordeaux”. Близость моря и гор сформировали уникальный
+            минеральный состав этих почв, что естественным образом сказывается на качестве вин региона и делает их
+            узнаваемыми и неординарными по своей палитре ароматов и вкусовых ощущений. В совокупности этот набор
+            почвенно-климатических характеристик создает великолепные условия для виноделия в регионе.
+          </p>
+        </section>
+      </div>
+    </div>
+    <section class="main-content__manufacturers-layout manufacturers-layout">
+      <h2 class="manufacturers-layout__heading">Производители</h2>
+      <ul class="manufacturers-layout__list">
+        <li class="manufacturers-layout__item">
+          <figure class="manufacturers-layout__item-content">
+            <img class="manufacturers-layout__img" src="img/manufac-petrovskiy.jpg" alt="Усадьба Перовских">
+            <figcaption class="manufacturers-layout__inner">
+              <h3 class="manufacturers-layout__name">Усадьба Перовских</h3>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="manufacturers-layout__item">
+          <figure class="manufacturers-layout__item-content">
+            <img class="manufacturers-layout__img" src="img/manufac-cuban.jpg" alt="Кубань-Вино">
+            <figcaption class="manufacturers-layout__inner">
+              <h3 class="manufacturers-layout__name">Кубань-Вино</h3>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="manufacturers-layout__item">
+          <figure class="manufacturers-layout__item-content">
+            <img class="manufacturers-layout__img" src="img/manufac-valley.jpg" alt="Долина">
+            <figcaption class="manufacturers-layout__inner">
+              <h3 class="manufacturers-layout__name">Долина</h3>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="manufacturers-layout__item">
+          <figure class="manufacturers-layout__item-content">
+            <img class="manufacturers-layout__img" src="img/manufac-victory.jpg" alt="Вилла Виктория">
+            <figcaption class="manufacturers-layout__inner">
+              <h3 class="manufacturers-layout__name">Вилла Виктория</h3>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="manufacturers-layout__item">
+          <figure class="manufacturers-layout__item-content">
+            <img class="manufacturers-layout__img" src="img/manufac-inkerman.jpg" alt="Инкерман">
+            <figcaption class="manufacturers-layout__inner">
+              <h3 class="manufacturers-layout__name">Инкерман</h3>
+              <button class="manufacturers-layout__modal-button" type="button" onclick="openModal()">Показать описание</button>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <section class="main-content__regions-block regions-block">
+      <h2 class="regions-block__heading visually-hidden">Откуда мы привозим наше вино</h2>
+      <ul class="regions-block__list">
+        <li class="regions-block__item">
+          <a class="regions-block__link regions-block__link--crimea" href="#">Крым</a>
+        </li>
+        <li class="regions-block__item">
+          <a class="regions-block__link regions-block__link--cuban" href="Regions.html">Кубань</a>
+        </li>
+        <li class="regions-block__item">
+          <a class="regions-block__link regions-block__link--caucasus" href="#">Кавказ</a>
+        </li>
+      </ul>
+    </section>
+    <section class="main-content__inst inst">
+      <div class="inst__inner">
+        <h2 class="inst__heading">Следите за новинками</h2>
+        <p class="inst__text">
+          Новые фото и интересные истории о винах в нашем Instagram
+        </p>
+        <a class="inst__link" href="#" target="_blank">Наш Instagram</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        Данный сайт не является интернет-магазином. Мы работаем в строгом соответствии с законами РФ: не продаём и не
+        доставляем алкоголь в ночное время; не продаём и не доставляем алкоголь несовершеннолетним; не осуществляем
+        дистанционную продажу или продажу алкоголя иными способами, запрещёнными законами РФ.
+      </p>
+    </div>
+  </footer>
+  <section class="manufacturer-modal">
+    <div class="manufacturer-modal__inner">
+      <div class="manufacturer-modal__heading-wrapper">
+        <h2 class="manufacturer-modal__heading">Производитель</h2>
+        <button class="manufacturer-modal__close-button" type="button">Закрыть окно</button>
+      </div>
+      <section class="manufacturer-modal__text-wrapper">
+        <h3 class="manufacturer-modal__name">Усадьба Перовских</h3>
+        <p class="manufacturer-modal__text">
+          Винодельческое хозяйство «Усадьба Перовских» было основано в 1834 году Николаем Перовским,
+          внебрачным сыном графа Разумовского.<br>
+          Его отец Алексей Кириллович Разумовский был невероятно образованной личностью – тайный советник,
+          сенатор, министр народного просвещения, отец пятерых детей в официальном браке,
+          а также родоначальник внебрачной ветви Перовских.
+
+        </p>
+        <p class="manufacturer-modal__text">
+          Фамилия Перовских дала России таких замечательных деятелей как Николай Перовский
+          (губернатор Таврической губернии и градоначальник Феодосии), Алексей Перовский,
+          также известный под псевдонимом Антоний Погорельский (русский писатель, член
+          Российской академии наук), Алексей Перовский – был родным дядей А. К. Толстого
+          и братьев Алексея и Владимира Жемчужниковых, а его племянники прославились на
+          всю Империю, создав литературную маску «Козьма Прутков», а также Лев Перовский
+          – министр внутренних дел Российской Империи, а также Управляющий Кабинетом
+          Eго Императорского Величества.
+        </p>
+      </section>
+    </div>
+  </section>
+  <script src="js/regions.min.js"></script>
+</body>
+</html>
